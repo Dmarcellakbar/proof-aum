@@ -72,7 +72,7 @@ import UpdateData from '../Dashboard/UpdateData';
   export default function BankReports() {
     return (
       <Box color={'white'} maxW="7xl">
-        {UpdateData().map((v: any) => (
+        {UpdateData.map((v: any) => (
         <Text
           textAlign={'right'}
           fontSize={'16px'}

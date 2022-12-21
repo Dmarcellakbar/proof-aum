@@ -56,7 +56,7 @@ function StatsCard(props: StatsCardProps) {
 export default function Dashboard() {
   return (
     <Box color={'white'} maxW="7xl" pl={'4rem'}>
-      {UpdateData().map((v: any) => (
+      {UpdateData.map((v: any) => (
       <Text
         textAlign={'right'}
         fontSize={'16px'}
@@ -73,7 +73,7 @@ export default function Dashboard() {
         Dashboard
         </chakra.h1>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
-      {UserData().map((item) => (
+      {UserData.map((item) => (
         <StatsCard
           title={item.title}
           stat={item.stat}

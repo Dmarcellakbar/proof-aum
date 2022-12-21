@@ -90,7 +90,7 @@ import UpdateData from '../Dashboard/UpdateData';
   export default function AccountList() {
     return (
       <Box bgColor={'#121826'} color={'white'} maxW="7xl" >
-        {UpdateData().map((v: any) => (
+        {UpdateData.map((v: any) => (
         <Text
             textAlign={'right'}
             fontSize={'16px'}
@@ -107,7 +107,7 @@ import UpdateData from '../Dashboard/UpdateData';
         Account List
         </chakra.h1>
         <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 5, lg: 8 }}>
-        {DataAccount().map((item: any) => (
+        {DataAccount.map((item: any) => (
           <StatsCard
             link={item.link}
             title={item.title}

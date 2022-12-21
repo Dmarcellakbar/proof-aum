@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Dummydata = () => [
+const Dummydata = [
     {data: 300, labels: "BTC", color: "rgb(255, 0, 0, 1)"},
     {data: 50, labels: "ETH", color: "rgb(255, 139, 0, 1)"},
     {data: 100, labels: "XLM", color: "rgb(231, 255, 0, 1)"},
