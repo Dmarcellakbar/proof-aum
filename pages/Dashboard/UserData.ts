@@ -14,4 +14,6 @@ const UserData: Array<LinkItemProps> = [
     { title: 'Tokens', stat: '10', icon: FiServer},
   ];
 
-export default UserData
+export default function Userindex() {
+  return UserData
+}

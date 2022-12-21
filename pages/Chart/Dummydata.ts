@@ -18,7 +18,10 @@ const Dummydata: Array<LinkItemProps> = [
     {data: 200, labels: "ALGO", color: "rgb(252, 0, 255, 1)"},
 ]
 
-export default Dummydata
+export default function Dummindex() {
+  return Dummydata
+}
+
 
 // export const data = [300, 50, 100, 300]
 // export const labels = ["BTC", "ETH", "XLM", "XRP"]

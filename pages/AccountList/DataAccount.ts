@@ -20,4 +20,7 @@ const DataAccount: Array<LinkItemProps> = [
     { title: 'Account 6', stat: 'Binance', icon: FiServer, asset: '$1.000.000', token: '5', link: '#'},
 ];
 
-export default DataAccount
+export default function Dataindex() {
+  return DataAccount
+}
+

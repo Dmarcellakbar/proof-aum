@@ -36,7 +36,7 @@ export default function ListData() {
   return (
     <>
     <SimpleGrid columns={2} spacing={3} mx={'1.5rem'} pt={'1rem'}>
-    {Dummydata.map((item: any) => (   
+    {Dummydata().map((item: any) => (   
         <Boxcard key={item.labels} labels={item.labels} data={item.data} color={item.color}/>
         ))} 
     </SimpleGrid>
