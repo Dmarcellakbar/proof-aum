@@ -1,6 +1,6 @@
 import { FiServer } from 'react-icons/fi';
 
-export const card = [
+export const card = () => [
     { title: 'Account 1', stat: 'Binance', icon: FiServer, asset: '$1.000.000', token: '5', link: '#'},
     { title: 'Account 2', stat: 'Binance', icon: FiServer, asset: '$1.000.000', token: '5', link: '#'},
     { title: 'Account 3', stat: 'Binance', icon: FiServer, asset: '$1.000.000', token: '5', link: '#'},

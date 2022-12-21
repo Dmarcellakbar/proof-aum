@@ -97,7 +97,7 @@ import {
         Account List
         </chakra.h1>
         <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 5, lg: 8 }}>
-        {card.map((item) => (
+        {card().map((item) => (
           <StatsCard
             title={item.title}
             stat={item.stat}

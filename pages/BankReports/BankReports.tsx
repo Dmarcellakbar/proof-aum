@@ -20,7 +20,7 @@ import {
     Tr
   } from '@chakra-ui/react';
   import { IconBaseProps, IconType } from 'react-icons';
-import { user } from '../Dashboard/UserData';
+import { datelist, user } from '../Dashboard/UserData';
   
   interface StatsCardProps {
     title: string;
@@ -69,18 +69,10 @@ import { user } from '../Dashboard/UserData';
     );
   }
   
-  interface LinkItemProps {
-    name: string;
-  }
-  
-  const datelist: Array<LinkItemProps> = [
-    { name: '13 Dec 2022, 14:00:50 UTC +7'},
-  ];
-  
   export default function BankReports() {
     return (
       <Box color={'white'} maxW="7xl">
-        {datelist.map((v) => (
+        {datelist().map((v: any) => (
         <Text
           textAlign={'right'}
           fontSize={'16px'}

@@ -11,7 +11,7 @@ import {
   Icon
 } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
-import { user } from './UserData';
+import { datelist, user } from './UserData';
 
 interface StatsCardProps {
   title: string;
@@ -52,18 +52,10 @@ function StatsCard(props: StatsCardProps) {
   );
 }
 
-interface LinkItemProps {
-  name: string;
-}
-
-const datelist: Array<LinkItemProps> = [
-  { name: '13 Dec 2022, 14:00:50 UTC +7'},
-];
-
 export default function Dashboard() {
   return (
     <Box color={'white'} maxW="7xl" pl={'4rem'}>
-      {datelist.map((v) => (
+      {datelist().map((v: any) => (
       <Text
         textAlign={'right'}
         fontSize={'16px'}
@@ -80,7 +72,7 @@ export default function Dashboard() {
         Dashboard
         </chakra.h1>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
-      {user.map((item) => (
+      {user().map((item) => (
         <StatsCard
           title={item.title}
           stat={item.stat}
