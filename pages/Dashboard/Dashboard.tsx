@@ -25,13 +25,14 @@ const logoadd = [
 
 export default function Dashboard() {
   return (
-<Box color={'white'} maxW="7xl" >
+<Box color={'white'} maxW="auto" mx={'2rem'} pl={'3rem'}>
         {UpdateData.map((v: any) => (
         <Text
           textAlign={'right'}
           fontSize={'16px'}
           fontWeight={'700'}
-          pt={'2rem'}>
+          pt={'2rem'}
+          mr={'4rem'}>
         Last update : {v.date}
         </Text>
         ))}
@@ -43,15 +44,15 @@ export default function Dashboard() {
             ml={'4rem'}>
           Dashboard
           </chakra.h1>
-        <SimpleGrid ml={'4rem'} columns={{ base: 1, md: 3 }}>
+        <SimpleGrid mx={'4rem'} columns={{ base: 1, md: 3 }}>
+          
         <Stat
       px={'2rem'}
       py={'5'}
       shadow={'xl'}
       bgColor={'#212936'}
       rounded={'lg'}
-      mr={'2rem'}
-      w={'354px'}>
+      mr={'2rem'}>
       <Flex >
         <Box
           my={'auto'}

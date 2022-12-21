@@ -9,7 +9,7 @@ import ListData from './ListData';
 
   export default function TokenChart() {
     return (
-      <Box rounded={'12px'} color={'white'} maxW="7xl" mt={'1.5rem'} pl={'3rem'}>
+      <Box rounded={'12px'} color={'white'} maxW="auto" mt={'1.5rem'} mx={'6rem'} pl={'2rem'}>
         <chakra.h1
           textAlign={'left'}
           fontSize={'24px'}
@@ -18,7 +18,7 @@ import ListData from './ListData';
           Token Holdings
         </chakra.h1>
         <Grid
-             h='300px'
+             h='320px'
              templateRows='repeat(2, 1fr)'
              templateColumns='repeat(5, 1fr)'
              gap={4}

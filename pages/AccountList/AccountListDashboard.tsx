@@ -15,17 +15,23 @@ import {
 //   import DataAccount from './DataAccount';
 import { FiServer } from 'react-icons/fi';
 import {DataAccount} from './DataAccount.json'
+import NextLink from 'next/link'
+import Wallet from '../../src/icons/walleticon.png'
+import Image from 'next/image'
 
   interface StatsCardProps {
     title: string;
     stat: string;
     asset: string;
     token: string;
+    link: string;
   }
   
   function StatsCard(props: StatsCardProps) {
-    const { title, stat, asset, token } = props;
+    const { title, stat, asset, token, link } = props;
     return (
+      <>
+      <NextLink href={link}>
       <Stat
         px={{ base: 2, md: 4 }}
         py={'5'}
@@ -37,10 +43,9 @@ import {DataAccount} from './DataAccount.json'
             my={'auto'}
             color={'white'}
             alignContent={'center'}>
-              <Icon
-                mr="4"
-                fontSize="16"
-              ><FiServer/></Icon>
+               <Box w={'48px'} cursor={'pointer'} mr={'1rem'}>
+                <Image src={Wallet} alt={'wallet'} />
+                </Box>
           </Box>
           <Box>
             <StatLabel fontSize={'16px'} fontWeight={'700'} isTruncated>
@@ -75,6 +80,8 @@ import {DataAccount} from './DataAccount.json'
                 </StatLabel>
             </Flex>
       </Stat>
+      </NextLink>
+      </>
     );
   }
   
@@ -88,7 +95,7 @@ import {DataAccount} from './DataAccount.json'
   
   export default function AccountList() {
     return (
-      <Box bgColor={'#121826'} color={'white'} maxW="7xl" pl={'4rem'}>
+      <Box bgColor={'#121826'} color={'white'} maxW="auto" mx={'6rem'} pl={'3rem'}>
         <chakra.h1
           textAlign={'left'}
           fontSize={'24px'}
@@ -99,6 +106,7 @@ import {DataAccount} from './DataAccount.json'
         <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 5, lg: 8 }}>
         {DataAccount.map((item) => (
           <StatsCard
+            link={item.link}
             title={item.title}
             stat={item.stat}
             asset={item.asset}

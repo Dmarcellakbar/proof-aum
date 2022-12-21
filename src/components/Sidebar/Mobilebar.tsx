@@ -30,40 +30,40 @@ import {
     { name: 'Account List', icon: Accounticon, route: '/AccountList' },
     { name: 'Bank Reports', icon: Reporticon, route: '/BankReports' },
   ];
-
-export default function Sidebar() {
+  
+export default function Mobilebar() {
+    
     return (
-        <Box
-          maxW={'242px'}
-          color={'white'}
-          bg={'#2A323E'}
-          boxShadow={'2xl'}
-          rounded={'24px'}
-          p={6}
-          >
-            <List spacing={6}>
-            {LinkItems.map((link) => (
-              <NextLink href={link.route}>
-                <ListItem 
-                w={'100%'} 
-                bgColor={'transparent'} 
-                _hover={{
-                    bg: 'cyan.400',
-                    color: 'white',
-                    borderRadius: '6px',
-                    }}
-                cursor="pointer"
-                fontSize="16px"
-                my={'1rem'}>
-                  <HStack>
+      <Box
+      maxW={'60px'}
+      color={'white'}
+      bg={'#2A323E'}
+      boxShadow={'2xl'}
+      rounded={'24px'}
+      p={3}
+      >
+        <List spacing={4}>
+        {LinkItems.map((link) => (
+          <NextLink href={link.route}>
+            <ListItem 
+            w={'100%'} 
+            bgColor={'transparent'} 
+            p='6px'
+            _hover={{
+                bg: 'cyan.400',
+                color: 'white',
+                borderRadius: '12px',
+                }}
+            cursor="pointer"
+            fontSize="16px">
+                <HStack>
                     <Image src={link.icon} alt={''} />
-                    <Text>{link.name}</Text>
-                  </HStack>
-                </ListItem>
-                </NextLink>
-            ))}
-            </List>
-        </Box>
+                </HStack>
+            </ListItem>
+            </NextLink>
+        ))}
+        </List>
+    </Box>
     );
   }
-
+  

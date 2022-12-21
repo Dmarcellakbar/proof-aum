@@ -66,7 +66,7 @@ import Image from 'next/image'
   
   export default function BankReports() {
     return (
-      <Box color={'white'} maxW="7xl">
+      <Box color={'white'} maxW="auto">
         {UpdateData.map((v: any) => (
         <Text
           textAlign={'right'}
