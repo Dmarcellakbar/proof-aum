@@ -12,18 +12,19 @@ import {
     Spacer
   } from '@chakra-ui/react';
   import { IconType } from 'react-icons';
-  import DataAccount from './DataAccount';
+//   import DataAccount from './DataAccount';
+import { FiServer } from 'react-icons/fi';
+import {DataAccount} from './DataAccount.json'
 
   interface StatsCardProps {
     title: string;
     stat: string;
-    icon: IconType;
     asset: string;
     token: string;
   }
   
   function StatsCard(props: StatsCardProps) {
-    const { title, stat, icon, asset, token } = props;
+    const { title, stat, asset, token } = props;
     return (
       <Stat
         px={{ base: 2, md: 4 }}
@@ -39,8 +40,7 @@ import {
               <Icon
                 mr="4"
                 fontSize="16"
-                as={icon}
-              />
+              ><FiServer/></Icon>
           </Box>
           <Box>
             <StatLabel fontSize={'16px'} fontWeight={'700'} isTruncated>
@@ -97,11 +97,10 @@ import {
         Account List
         </chakra.h1>
         <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 5, lg: 8 }}>
-        {DataAccount().map((item) => (
+        {DataAccount.map((item) => (
           <StatsCard
             title={item.title}
             stat={item.stat}
-            icon={item.icon}
             asset={item.asset}
             token={item.token}
           />

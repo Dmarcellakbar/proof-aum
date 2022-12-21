@@ -12,21 +12,22 @@ import {
     Spacer
   } from '@chakra-ui/react';
   import { IconType } from 'react-icons';
-  import DataAccount  from './DataAccount';
+//   import DataAccount  from './DataAccount';
   import NextLink from 'next/link'
-import UpdateData from '../Dashboard/UpdateData';
+import {UpdateData} from '../Dashboard/UpdateData.json';
+import {DataAccount} from './DataAccount.json'
+import { FiServer } from 'react-icons/fi';
 
   interface StatsCardProps {
     title: string;
     stat: string;
-    icon: IconType;
     asset: string;
     token: string;
     link: string;
   }
   
   function StatsCard(props: StatsCardProps) {
-    const { title, stat, icon, asset, token, link } = props;
+    const { title, stat, asset, token, link } = props;
     return (
     <>
     <NextLink href={link}>
@@ -45,8 +46,7 @@ import UpdateData from '../Dashboard/UpdateData';
               <Icon
                 mr="4"
                 fontSize="16"
-                as={icon}
-              />
+              ><FiServer /></Icon>
           </Box>
           <Box>
             <StatLabel fontSize={'16px'} fontWeight={'700'} isTruncated>
@@ -90,13 +90,13 @@ import UpdateData from '../Dashboard/UpdateData';
   export default function AccountList() {
     return (
       <Box bgColor={'#121826'} color={'white'} maxW="7xl" >
-        {UpdateData().map((v: any) => (
+        {UpdateData.map((v: any) => (
         <Text
             textAlign={'right'}
             fontSize={'16px'}
             fontWeight={'700'}
             pt={'2rem'}>
-        Last update : {v.name}
+        Last update : {v.date}
         </Text>
         ))}
         <chakra.h1
@@ -107,12 +107,11 @@ import UpdateData from '../Dashboard/UpdateData';
         Account List
         </chakra.h1>
         <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 5, lg: 8 }}>
-        {DataAccount().map((item: any) => (
+        {DataAccount.map((item: any) => (
           <StatsCard
             link={item.link}
             title={item.title}
-            stat={item.stat}
-            icon={item.icon}
+            stat={item.stat} 
             asset={item.asset}
             token={item.token}
           />

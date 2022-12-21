@@ -20,7 +20,7 @@ import {
     Tr
   } from '@chakra-ui/react';
   import { IconBaseProps, IconType } from 'react-icons';
-import UpdateData from '../Dashboard/UpdateData';
+import {UpdateData} from '../Dashboard/UpdateData.json';
   
   interface StatsCardProps {
     title: string;
@@ -72,13 +72,13 @@ import UpdateData from '../Dashboard/UpdateData';
   export default function BankReports() {
     return (
       <Box color={'white'} maxW="7xl">
-        {UpdateData().map((v: any) => (
+        {UpdateData.map((v: any) => (
         <Text
           textAlign={'right'}
           fontSize={'16px'}
           fontWeight={'700'}
           pt={'2rem'}>
-        Last update : {v.name}
+        Last update : {v.date}
         </Text>
         ))}
         <chakra.h1
