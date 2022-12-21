@@ -34,12 +34,12 @@ import {
     return (
       <>
         <Show breakpoint='(min-width: 800px)'>
-          <Box pl={8} position={'fixed'} zIndex={1}>
+          <Box pl={8} position={'fixed'} zIndex={1} h={'150vh'}>
             <Sidebar/>
           </Box>
         </Show>
         <Show breakpoint='(max-width: 800px)'>
-          <Box pl={2} pr={5} position={'fixed'} zIndex={1}>
+          <Box pl={2} pr={5} position={'fixed'} zIndex={1} h={'150vh'}>
             <Mobilebar/>
           </Box>
         </Show>

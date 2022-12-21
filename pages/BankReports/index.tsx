@@ -7,7 +7,7 @@ export default function index() {
   return (
     <>
     <Layout>
-      <Box mr={'10rem'}  h={'130vh'} bgColor={'#121826'}>
+      <Box mr={'10rem'}  h={'150vh'} bgColor={'#121826'}>
         <BankReports/>
       </Box>
     </Layout>
