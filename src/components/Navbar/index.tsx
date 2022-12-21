@@ -18,9 +18,11 @@ export default function navbar() {
     <>
       <Box bg={'#2A323E'} px={4} zIndex={'1'} w={'100%'} position={'fixed'}>
         <Flex h={'80px'} alignItems={'center'} justifyContent={'space-between'}>
+          <NextLink href={'/Dashboard'}>
             <Box w={'121.56px'}>
                 <Image src={Cfund} alt={'cfundlogo'}/>
             </Box>
+            </NextLink>
           <Flex alignItems={'center'}>
             <Menu>
               <MenuButton
