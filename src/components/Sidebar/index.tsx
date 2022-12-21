@@ -8,33 +8,34 @@ import {
     List,
     ListItem,
     Flex,
+    HStack,
+    Text
   } from '@chakra-ui/react';
-  import {
-    FiHome,
-    FiTrendingUp,
-    FiCompass,
-  } from 'react-icons/fi';
   import { IconType } from 'react-icons';
   import { ReactText } from 'react';
   import NextLink from 'next/link'
   import { Show } from '@chakra-ui/react'
+  import Homeicon from '../../icons/home-2.png'
+  import Accounticon from '../../icons/wallet-money.png'
+  import Reporticon from '../../icons/bank.png'
+  import Image from 'next/image'
 
   interface LinkItemProps {
     name: string;
-    icon: IconType;
+    icon: any;
     route: string;
   }
   const LinkItems: Array<LinkItemProps> = [
-    { name: 'Dashboard', icon: FiHome, route: 'Dashboard' },
-    { name: 'Account List', icon: FiTrendingUp, route: 'AccountList' },
-    { name: 'Bank Reports', icon: FiCompass, route: 'BankReports' },
+    { name: 'Dashboard', icon: Homeicon, route: '/Dashboard' },
+    { name: 'Account List', icon: Accounticon, route: '/AccountList' },
+    { name: 'Bank Reports', icon: Reporticon, route: '/BankReports' },
   ];
   
   export default function index() {
     return (
       <>
         <Show breakpoint='(min-width: 800px)'>
-          <Box pl={8} position={'fixed'} zIndex={1} h={'150vh'}>
+          <Box pl={8} position={'fixed'} zIndex={1} h={'150vh'} w={'242px'}>
             <Sidebar/>
           </Box>
         </Show>
@@ -58,51 +59,31 @@ function Sidebar() {
           rounded={'24px'}
           p={6}
           >
-            <List spacing={4}>
+            <List spacing={6}>
             {LinkItems.map((link) => (
+              <NextLink href={link.route}>
                 <ListItem 
                 w={'100%'} 
                 bgColor={'transparent'} 
-                p='6px'
                 _hover={{
                     bg: 'cyan.400',
                     color: 'white',
-                    borderRadius: '12px',
+                    borderRadius: '6px',
                     }}
                 cursor="pointer"
-                fontSize="16px">
-                    <NavItem key={link.name} icon={link.icon} route={link.route}>
-                    {link.name}
-                    </NavItem>
+                fontSize="16px"
+                my={'1rem'}>
+                  <HStack>
+                    <Image src={link.icon} alt={''} />
+                    <Text>{link.name}</Text>
+                  </HStack>
                 </ListItem>
+                </NextLink>
             ))}
             </List>
         </Box>
     );
   }
-
-  interface NavItemProps extends FlexProps {
-    icon: IconType;
-    children: ReactText;
-    route: string;
-  }
-  const NavItem = ({ icon, children, route }: NavItemProps) => {
-    return (
-      <NextLink href={route} >
-          {icon && (
-            <Icon
-              mr="4"
-              fontSize="16"
-              _groupHover={{
-                color: 'white',
-              }}
-              as={icon}
-            />
-          )}
-          {children}
-      </NextLink>
-    );
-  };
 
   function Mobilebar() {
     
@@ -117,6 +98,7 @@ function Sidebar() {
       >
         <List spacing={4}>
         {LinkItems.map((link) => (
+          <NextLink href={link.route}>
             <ListItem 
             w={'100%'} 
             bgColor={'transparent'} 
@@ -128,10 +110,11 @@ function Sidebar() {
                 }}
             cursor="pointer"
             fontSize="16px">
-                <NavItem key={link.name} icon={link.icon} route={link.route}>
-                {''}
-                </NavItem>
+                <HStack>
+                    <Image src={link.icon} alt={''} />
+                </HStack>
             </ListItem>
+            </NextLink>
         ))}
         </List>
     </Box>

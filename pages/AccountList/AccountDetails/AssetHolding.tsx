@@ -22,42 +22,39 @@ import {
     Spacer
   } from '@chakra-ui/react';
   import { IconBaseProps, IconType } from 'react-icons';
-import {UpdateData} from '../Dashboard/UpdateData.json';
-import {BankData} from './BankData.json';
-import Viewicon from '../../src/icons/search-status.png'
-import Downloadicon from '../../src/icons/document-download.png'
-import Reporticon from '../../src/icons/document-text.png'
+import {AssetData} from './AssetData.json';
 import Image from 'next/image'
 
   interface StatsCardProps {
-    title: string;
-    date: string;
+    assets: string;
+    net: string;
+    balance: string;
+    price: string;
+    value: string;
+    icon: any;
   }
   
   function StatsCard(props: StatsCardProps) {
-    const { title, date } = props;
+    const { assets, balance, price, value, net, icon } = props;
     return (
           <Tbody bgColor={'#1E2432'} >
             <Tr>
               <Td>
                 <HStack>
-                <Box w={'24px'} cursor={'pointer'} mr={'1rem'}>
-                <Image src={Reporticon} alt={'view'} />
+                <Box w={'24px'} mr={'1rem'}>
+                <Image src={icon} alt={'view'} width={24} height={24}/>
                 </Box>
                 <Text fontSize={'16px'} fontWeight={'600'}>
-                {title}</Text>
+                {assets}</Text>
+                <Text color={'#959BA6'} fontSize={'16px'} fontWeight={'400'}>
+                {net}</Text>
                 </HStack></Td>
-              <Td textAlign={'right'}>{date}</Td>
+              <Td textAlign={'right'}>{balance}</Td>
               <Td textAlign={'right'}>
-                <HStack >
-                <Spacer />
-                <Box w={'24px'} cursor={'pointer'} mr={'1rem'}>
-                <Image src={Viewicon} alt={'view'} />
-                </Box>
-                <Box w={'24px'} cursor={'pointer'}>
-                <Image src={Downloadicon} alt={'download'} />
-                </Box>
-                </HStack>
+                ${price}
+              </Td>
+              <Td textAlign={'right'}>
+                ${value}
               </Td>
             </Tr>
           </Tbody>
@@ -66,22 +63,13 @@ import Image from 'next/image'
   
   export default function BankReports() {
     return (
-      <Box color={'white'} maxW="7xl">
-        {UpdateData.map((v: any) => (
-        <Text
-          textAlign={'right'}
-          fontSize={'16px'}
-          fontWeight={'700'}
-          pt={'2rem'}>
-        Last update : {v.date}
-        </Text>
-        ))}
+      <Box color={'white'} maxW="7xl" ml={'4rem'} pt={'2rem'}>
         <chakra.h1
             textAlign={'left'}
             fontSize={'24px'}
             fontWeight={'700'}
             pb={'1rem'}>
-          Monthly Bank Reports
+          Asset Holdings
           </chakra.h1>
         <SimpleGrid columns={{ base: 1, md: 1 }}>
         <Stat
@@ -96,23 +84,28 @@ import Image from 'next/image'
             <Tr>
               <Th>
               <Text fontSize={'14px'} fontWeight={'700'}>
-                Bank Statement
+                Assets
                 </Text>
                 </Th>
               <Th textAlign={'right'}>
               <Text fontSize={'14px'} fontWeight={'700'}>
-                Date
+                Balance
                 </Text>
                 </Th>
               <Th isNumeric textAlign={'right'}>
               <Text fontSize={'14px'} fontWeight={'700'}>
-                View/Download
+                Price
+              </Text>
+              </Th>
+              <Th isNumeric textAlign={'right'}>
+              <Text fontSize={'14px'} fontWeight={'700'}>
+                Value
               </Text>
               </Th>
             </Tr>
           </Thead>
-        {BankData.map((item) => (
-          <StatsCard title={item.title} date={item.date}/>
+        {AssetData.map((item) => (
+          <StatsCard assets={item.assets} net={item.net} balance={item.balance} price={item.price} value={item.value} icon={item.icon}/>
         ))} 
             </Table>
         </TableContainer>

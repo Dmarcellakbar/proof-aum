@@ -11,12 +11,11 @@ import {
     Icon,
     Spacer
   } from '@chakra-ui/react';
-  import { IconType } from 'react-icons';
-//   import DataAccount  from './DataAccount';
   import NextLink from 'next/link'
 import {UpdateData} from '../Dashboard/UpdateData.json';
 import {DataAccount} from './DataAccount.json'
-import { FiServer } from 'react-icons/fi';
+import Wallet from '../../src/icons/walleticon.png'
+import Image from 'next/image'
 
   interface StatsCardProps {
     title: string;
@@ -43,10 +42,9 @@ import { FiServer } from 'react-icons/fi';
             my={'auto'}
             color={'white'}
             alignContent={'center'}>
-              <Icon
-                mr="4"
-                fontSize="16"
-              ><FiServer /></Icon>
+              <Box w={'48px'} cursor={'pointer'} mr={'1rem'}>
+                <Image src={Wallet} alt={'wallet'} />
+                </Box>
           </Box>
           <Box>
             <StatLabel fontSize={'16px'} fontWeight={'700'} isTruncated>
