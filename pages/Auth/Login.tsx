@@ -58,6 +58,7 @@ import {
                     Password
                 </Text>
                 <Input
+                  type={'password'}
                   placeholder="your password"
                   bg={'gray.700'}
                   border={0}
