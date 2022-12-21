@@ -12,9 +12,9 @@ import {
     Spacer
   } from '@chakra-ui/react';
   import { IconType } from 'react-icons';
-  import { card }  from './DataAccount';
+  import DataAccount  from './DataAccount';
   import NextLink from 'next/link'
-import { datelist } from '../Dashboard/UserData';
+import UpdateData from '../Dashboard/UpdateData';
 
   interface StatsCardProps {
     title: string;
@@ -90,7 +90,7 @@ import { datelist } from '../Dashboard/UserData';
   export default function AccountList() {
     return (
       <Box bgColor={'#121826'} color={'white'} maxW="7xl" >
-        {datelist().map((v: any) => (
+        {UpdateData().map((v: any) => (
         <Text
             textAlign={'right'}
             fontSize={'16px'}
@@ -107,7 +107,7 @@ import { datelist } from '../Dashboard/UserData';
         Account List
         </chakra.h1>
         <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 5, lg: 8 }}>
-        {card().map((item: any) => (
+        {DataAccount().map((item: any) => (
           <StatsCard
             link={item.link}
             title={item.title}

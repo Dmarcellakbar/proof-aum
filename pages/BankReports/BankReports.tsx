@@ -20,7 +20,7 @@ import {
     Tr
   } from '@chakra-ui/react';
   import { IconBaseProps, IconType } from 'react-icons';
-import { datelist, user } from '../Dashboard/UserData';
+import UpdateData from '../Dashboard/UpdateData';
   
   interface StatsCardProps {
     title: string;
@@ -72,7 +72,7 @@ import { datelist, user } from '../Dashboard/UserData';
   export default function BankReports() {
     return (
       <Box color={'white'} maxW="7xl">
-        {datelist().map((v: any) => (
+        {UpdateData().map((v: any) => (
         <Text
           textAlign={'right'}
           fontSize={'16px'}

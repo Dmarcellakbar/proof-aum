@@ -1,15 +1,15 @@
 import { Box } from '@chakra-ui/react';
 import 'chart.js/auto'; 
 import { Doughnut } from "react-chartjs-2";
-import { dummydata } from "./Dummydata";
+import Dummydata from "./Dummydata";
 
 const chartdata = {
-    labels: dummydata().map((v: any) => v.labels),
+    labels: Dummydata().map((v: any) => v.labels),
     datasets: [
       {
-          data: dummydata().map((v: any) => v.data),
-          backgroundColor: dummydata().map((v: any) => v.color),
-          hoverBackgroundColor: dummydata().map((v: any) => v.color),
+          data: Dummydata().map((v: any) => v.data),
+          backgroundColor: Dummydata().map((v: any) => v.color),
+          hoverBackgroundColor: Dummydata().map((v: any) => v.color),
           hoverOffset: 4,      
       },
     ],

@@ -12,7 +12,7 @@ import {
     Spacer
   } from '@chakra-ui/react';
   import { IconType } from 'react-icons';
-  import { card } from './DataAccount';
+  import DataAccount from './DataAccount';
 
   interface StatsCardProps {
     title: string;
@@ -97,7 +97,7 @@ import {
         Account List
         </chakra.h1>
         <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 5, lg: 8 }}>
-        {card().map((item) => (
+        {DataAccount().map((item) => (
           <StatsCard
             title={item.title}
             stat={item.stat}

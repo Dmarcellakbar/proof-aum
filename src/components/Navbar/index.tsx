@@ -2,19 +2,13 @@ import {
   Box,
   Flex,
   Avatar,
-  HStack,
   Button,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
   MenuDivider,
-  useColorModeValue,
-  Container,
-  Stack,
-  SimpleGrid,
 } from '@chakra-ui/react';
-import Sidebar from '../Sidebar';
 import Image from 'next/image'
 import Cfund from '../../image/logocfund.png'
 import NextLink from 'next/link'

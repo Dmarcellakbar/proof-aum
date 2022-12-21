@@ -11,7 +11,8 @@ import {
   Icon
 } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
-import { datelist, user } from './UserData';
+import UserData from './UserData';
+import UpdateData from './UpdateData';
 
 interface StatsCardProps {
   title: string;
@@ -55,7 +56,7 @@ function StatsCard(props: StatsCardProps) {
 export default function Dashboard() {
   return (
     <Box color={'white'} maxW="7xl" pl={'4rem'}>
-      {datelist().map((v: any) => (
+      {UpdateData().map((v: any) => (
       <Text
         textAlign={'right'}
         fontSize={'16px'}
@@ -72,7 +73,7 @@ export default function Dashboard() {
         Dashboard
         </chakra.h1>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
-      {user().map((item) => (
+      {UserData().map((item) => (
         <StatsCard
           title={item.title}
           stat={item.stat}
