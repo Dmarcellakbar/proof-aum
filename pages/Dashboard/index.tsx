@@ -8,7 +8,7 @@ export default function index() {
   return (
     <>
     <Layout>
-      <Box pl={'2rem'}  h={'150vh'} bgColor={'#121826'}>
+      <Box pl={'2rem'}  h={'150vh'} bgColor={'#121826'} pb={'2rem'}>
       <Dashboard/>
       <TokenChart/>
       <AccountList />
