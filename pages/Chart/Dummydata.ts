@@ -1,6 +1,11 @@
 import React from 'react'
+interface LinkItemProps {
+    data: number;
+    labels: string;
+    color: string;
+  }
 
-const Dummydata = [
+const Dummydata: Array<LinkItemProps> = [
     {data: 300, labels: "BTC", color: "rgb(255, 0, 0, 1)"},
     {data: 50, labels: "ETH", color: "rgb(255, 139, 0, 1)"},
     {data: 100, labels: "XLM", color: "rgb(231, 255, 0, 1)"},
