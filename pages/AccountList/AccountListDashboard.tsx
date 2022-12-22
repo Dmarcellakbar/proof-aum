@@ -16,7 +16,6 @@ import {
 import { FiServer } from 'react-icons/fi';
 import {DataAccount} from './DataAccount.json'
 import NextLink from 'next/link'
-import Wallet from '../../src/icons/walleticon.png'
 import Image from 'next/image'
 
   interface StatsCardProps {
@@ -44,7 +43,7 @@ import Image from 'next/image'
             color={'white'}
             alignContent={'center'}>
                <Box w={'48px'} cursor={'pointer'} mr={'1rem'}>
-                <Image src={Wallet} alt={'wallet'} />
+                <Image src={'/walleticon.png'} alt={'wallet'} width={48} height={48}/>
                 </Box>
           </Box>
           <Box>
@@ -95,7 +94,7 @@ import Image from 'next/image'
   
   export default function AccountList() {
     return (
-      <Box bgColor={'#121826'} color={'white'} maxW="auto" mx={'6rem'} pl={'3rem'}>
+      <Box bgColor={'#121826'} color={'white'} maxW="auto" px={'4rem'}>
         <chakra.h1
           textAlign={'left'}
           fontSize={'24px'}
@@ -103,7 +102,7 @@ import Image from 'next/image'
           pb={'1rem'}>
         Account List
         </chakra.h1>
-        <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 5, lg: 8 }}>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={{ base: 5, lg: 8 }}>
         {DataAccount.map((item) => (
           <StatsCard
             link={item.link}

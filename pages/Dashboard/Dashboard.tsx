@@ -13,19 +13,10 @@ import {
 import {UpdateData} from './UpdateData.json';
 import {DataUser} from './DataUser.json';
 import Image from 'next/image'
-import Coin from '../../src/icons/dollar-circle.png'
-import Wallet from '../../src/icons/wallet-money.png'
-import Bitcoin from '../../src/icons/bitcoin.png'
-
-const logoadd = [
-  {logo: Coin},
-  {logo: Wallet},
-  {logo: Bitcoin},
-]
 
 export default function Dashboard() {
   return (
-<Box color={'white'} maxW="auto" mx={'2rem'} pl={'3rem'}>
+<Box color={'white'} maxW="auto" >
         {UpdateData.map((v: any) => (
         <Text
           textAlign={'right'}
@@ -44,10 +35,10 @@ export default function Dashboard() {
             ml={'4rem'}>
           Dashboard
           </chakra.h1>
-        <SimpleGrid mx={'4rem'} columns={{ base: 1, md: 3 }}>
+        <SimpleGrid px={'4rem'} columns={{ base: 1, md: 3 }}>
           
         <Stat
-      px={'2rem'}
+      px={'1rem'}
       py={'5'}
       shadow={'xl'}
       bgColor={'#212936'}
@@ -58,8 +49,8 @@ export default function Dashboard() {
           my={'auto'}
           color={'white'}
           alignContent={'center'}>
-            <Box w={'24px'} cursor={'pointer'} mr={'1rem'}>
-                <Image src={Coin} alt={'view'} />
+            <Box w={'32px'} cursor={'pointer'} mr={'0.5rem'}>
+                <Image src={'/dollar-circle.png'} alt={'view'} width={32} height={32}/>
                 </Box>
         </Box>
         <Box>
@@ -67,7 +58,7 @@ export default function Dashboard() {
           Exchange Assets
           </StatLabel>
           {DataUser.map((v)=>
-          <StatNumber fontSize={'24px'} fontWeight={'700'}>
+          <StatNumber fontSize={{ base: '22px', md: '22px', lg: '24px' }} fontWeight={'700'}>
           {v.Asset}
           </StatNumber>
           )}
@@ -76,7 +67,7 @@ export default function Dashboard() {
     </Stat>
 
     <Stat
-      px={'2rem'}
+      px={'1rem'}
       py={'5'}
       shadow={'xl'}
       bgColor={'#212936'}
@@ -87,8 +78,8 @@ export default function Dashboard() {
           my={'auto'}
           color={'white'}
           alignContent={'center'}>
-            <Box w={'24px'} cursor={'pointer'} mr={'1rem'}>
-                <Image src={Coin} alt={'view'} />
+            <Box w={'32px'} cursor={'pointer'} mr={'0.5rem'}>
+                <Image src={'/wallet-dash.png'} alt={'view'} width={32} height={32}/>
                 </Box>
         </Box>
         <Box>
@@ -105,7 +96,7 @@ export default function Dashboard() {
     </Stat>
 
     <Stat
-      px={'2rem'}
+      px={'1rem'}
       py={'5'}
       shadow={'xl'}
       bgColor={'#212936'}
@@ -115,8 +106,8 @@ export default function Dashboard() {
           my={'auto'}
           color={'white'}
           alignContent={'center'}>
-            <Box w={'24px'} cursor={'pointer'} mr={'1rem'}>
-                <Image src={Coin} alt={'view'} />
+            <Box w={'32px'} cursor={'pointer'} mr={'0.5rem'}>
+                <Image src={'/bitcoin.png'} alt={'view'} width={32} height={32}/>
                 </Box>
         </Box>
         <Box>

@@ -9,7 +9,7 @@ import ListData from './ListData';
 
   export default function TokenChart() {
     return (
-      <Box rounded={'12px'} color={'white'} maxW="auto" mt={'1.5rem'} mx={'6rem'} pl={'2rem'}>
+      <Box rounded={'12px'} color={'white'} maxW="auto" mt={'1.5rem'} px={'3rem'} mr={'1rem'}>
         <chakra.h1
           textAlign={'left'}
           fontSize={'24px'}

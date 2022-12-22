@@ -14,7 +14,6 @@ import {
   import NextLink from 'next/link'
 import {UpdateData} from '../Dashboard/UpdateData.json';
 import {DataAccount} from './DataAccount.json'
-import Wallet from '../../src/icons/walleticon.png'
 import Image from 'next/image'
 
   interface StatsCardProps {
@@ -43,7 +42,7 @@ import Image from 'next/image'
             color={'white'}
             alignContent={'center'}>
               <Box w={'48px'} cursor={'pointer'} mr={'1rem'}>
-                <Image src={Wallet} alt={'wallet'} />
+                <Image src={'/walleticon.png'} alt={'wallet'} width={48} height={48}/>
                 </Box>
           </Box>
           <Box>
@@ -87,7 +86,7 @@ import Image from 'next/image'
   
   export default function AccountList() {
     return (
-      <Box bgColor={'#121826'} color={'white'} maxW="7xl" >
+      <Box bgColor={'#121826'} color={'white'} maxW="auto" mr={'4rem'}>
         {UpdateData.map((v: any) => (
         <Text
             textAlign={'right'}
@@ -104,7 +103,7 @@ import Image from 'next/image'
           pb={'1rem'}>
         Account List
         </chakra.h1>
-        <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 5, lg: 8 }}>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={{ base: 5, lg: 8 }}>
         {DataAccount.map((item: any) => (
           <StatsCard
             link={item.link}

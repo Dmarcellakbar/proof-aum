@@ -63,7 +63,7 @@ import Image from 'next/image'
   
   export default function BankReports() {
     return (
-      <Box color={'white'} maxW="7xl" ml={'4rem'} pt={'2rem'}>
+      <Box color={'white'} maxW="auto" pt={'2rem'}>
         <chakra.h1
             textAlign={'left'}
             fontSize={'24px'}

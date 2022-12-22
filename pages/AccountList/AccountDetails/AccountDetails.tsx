@@ -13,21 +13,11 @@ import {
   import {UpdateData} from '../../Dashboard/UpdateData.json';
   import {DataUser} from '../../Dashboard/DataUser.json';
   import Image from 'next/image'
-  import Coin from '../../../src/icons/dollar-circle.png'
-  import Wallet from '../../../src/icons/wallet-money.png'
-  import Bitcoin from '../../../src/icons/bitcoin.png'
-  import {DataAccount} from '../DataAccount.json'
-  
-  const logoadd = [
-    {logo: Coin},
-    {logo: Wallet},
-    {logo: Bitcoin},
-  ]
   
   export default function Dashboard() {
     return (
         <>
-    <Box color={'white'} maxW="7xl" >
+    <Box color={'white'} maxW="auto" >
             {UpdateData.map((v: any) => (
             <Text
                 textAlign={'right'}
@@ -41,26 +31,25 @@ import {
                 textAlign={'left'}
                 fontSize={'24px'}
                 fontWeight={'700'}
-                pb={'1rem'}
-                ml={'4rem'}>
+                pb={'1rem'}>
                     Account 1
                 </chakra.h1>
-            <SimpleGrid ml={'4rem'} columns={{ base: 1, md: 3 }}>
+            <SimpleGrid columns={{ base: 1, md: 2 }}>
             <Stat
-            px={'2rem'}
+            px={'1rem'}
             py={'5'}
             shadow={'xl'}
             bgColor={'#212936'}
             rounded={'lg'}
-            mr={'2rem'}
-            w={'354px'}>
+            mr={'4rem'}
+            w={'auto'}>
             <Flex >
             <Box
                 my={'auto'}
                 color={'white'}
                 alignContent={'center'}>
-                <Box w={'24px'} cursor={'pointer'} mr={'1rem'}>
-                    <Image src={Coin} alt={'view'} />
+                <Box w={'32px'} cursor={'pointer'} mr={'1rem'}>
+                    <Image src={'/dollar-circle.png'} alt={'view'} width={32} height={32}/>
                     </Box>
             </Box>
             <Box>
@@ -77,7 +66,7 @@ import {
         </Stat>
     
         <Stat
-            px={'2rem'}
+            px={'1rem'}
             py={'5'}
             shadow={'xl'}
             bgColor={'#212936'}
@@ -87,8 +76,8 @@ import {
                 my={'auto'}
                 color={'white'}
                 alignContent={'center'}>
-                <Box w={'24px'} cursor={'pointer'} mr={'1rem'}>
-                    <Image src={Coin} alt={'view'} />
+                <Box w={'32px'} cursor={'pointer'} mr={'1rem'}>
+                    <Image src={'/bitcoin.png'} alt={'view'} width={32} height={32}/>
                     </Box>
             </Box>
             <Box>

@@ -5,7 +5,7 @@ import AccountList from "./AccountList";
 export default function index() {
   return (
     <Layout>
-      <Box pl={'4rem'} h={'150vh'} bgColor={'#121826'}>
+      <Box h={'150vh'} bgColor={'#121826'} px={'1rem'}>
         <AccountList/>
       </Box>
     </Layout>
