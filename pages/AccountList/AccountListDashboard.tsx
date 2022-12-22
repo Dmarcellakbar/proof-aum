@@ -5,15 +5,8 @@ import {
     SimpleGrid,
     Stat,
     StatLabel,
-    StatNumber,
-    useColorModeValue,
-    Text,
-    Icon,
     Spacer
   } from '@chakra-ui/react';
-  import { IconType } from 'react-icons';
-//   import DataAccount from './DataAccount';
-import { FiServer } from 'react-icons/fi';
 import {DataAccount} from './DataAccount.json'
 import NextLink from 'next/link'
 import Image from 'next/image'

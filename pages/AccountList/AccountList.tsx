@@ -5,10 +5,7 @@ import {
     SimpleGrid,
     Stat,
     StatLabel,
-    StatNumber,
-    useColorModeValue,
     Text,
-    Icon,
     Spacer
   } from '@chakra-ui/react';
   import NextLink from 'next/link'

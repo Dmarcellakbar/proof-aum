@@ -1,27 +1,19 @@
 import {
     Box,
     chakra,
-    Flex,
     SimpleGrid,
     Stat,
-    StatLabel,
-    StatNumber,
-    useColorModeValue,
     Text,
-    Icon,
     Table,
-    TableCaption,
     TableContainer,
     Tbody,
     Td,
-    Tfoot,
     Th,
     Thead,
     Tr,
     HStack,
     Spacer
   } from '@chakra-ui/react';
-  import { IconBaseProps, IconType } from 'react-icons';
 import {UpdateData} from '../Dashboard/UpdateData.json';
 import {BankData} from './BankData.json';
 import Viewicon from '../../src/icons/search-status.png'

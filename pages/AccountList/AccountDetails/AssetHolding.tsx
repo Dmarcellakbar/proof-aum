@@ -1,27 +1,17 @@
 import {
     Box,
     chakra,
-    Flex,
     SimpleGrid,
     Stat,
-    StatLabel,
-    StatNumber,
-    useColorModeValue,
     Text,
-    Icon,
     Table,
-    TableCaption,
     TableContainer,
     Tbody,
     Td,
-    Tfoot,
     Th,
     Thead,
     Tr,
-    HStack,
-    Spacer
-  } from '@chakra-ui/react';
-  import { IconBaseProps, IconType } from 'react-icons';
+    HStack  } from '@chakra-ui/react';
 import {AssetData} from './AssetData.json';
 import Image from 'next/image'
 

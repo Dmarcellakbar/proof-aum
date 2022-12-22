@@ -6,10 +6,7 @@ import {
     Stat,
     StatLabel,
     StatNumber,
-    useColorModeValue,
-    Text,
-    Icon
-  } from '@chakra-ui/react';
+    Text  } from '@chakra-ui/react';
   import {UpdateData} from '../../Dashboard/UpdateData.json';
   import {DataUser} from '../../Dashboard/DataUser.json';
   import Image from 'next/image'

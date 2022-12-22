@@ -1,4 +1,4 @@
-import { SimpleGrid, Box, Text, Button, ButtonGroup, Flex, Heading, Spacer, ListIcon, HStack } from '@chakra-ui/react'
+import { SimpleGrid, Box, Text, ButtonGroup, Flex, Heading, Spacer, HStack } from '@chakra-ui/react'
 import React from 'react'
 import {MdCircle} from 'react-icons/md'
 import {Dummydata} from './DummyData.json';
