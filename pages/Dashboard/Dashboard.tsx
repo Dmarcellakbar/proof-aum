@@ -42,8 +42,7 @@ export default function Dashboard() {
       py={'5'}
       shadow={'xl'}
       bgColor={'#212936'}
-      rounded={'lg'}
-      mr={'2rem'}>
+      rounded={'lg'}>
       <Flex >
         <Box
           my={'auto'}
@@ -72,7 +71,7 @@ export default function Dashboard() {
       shadow={'xl'}
       bgColor={'#212936'}
       rounded={'lg'}
-      mr={'2rem'}>
+      ml={'2rem'}>
       <Flex >
         <Box
           my={'auto'}
@@ -100,7 +99,8 @@ export default function Dashboard() {
       py={'5'}
       shadow={'xl'}
       bgColor={'#212936'}
-      rounded={'lg'}>
+      rounded={'lg'}
+      ml={'2rem'}>
       <Flex >
         <Box
           my={'auto'}
