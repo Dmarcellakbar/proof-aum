@@ -12,7 +12,7 @@ import {
     Text
   } from '@chakra-ui/react';
   import { IconType } from 'react-icons';
-  import { ReactText } from 'react';
+  import { ReactText, useState } from 'react';
   import NextLink from 'next/link'
   import { Show } from '@chakra-ui/react'
   import Homeicon from '../../icons/home-2.png'
@@ -32,6 +32,7 @@ import {
   ];
 
 export default function Sidebar() {
+  const [active, setActive] = useState(null)
     return (
         <Box
           maxW={'242px'}
@@ -42,8 +43,8 @@ export default function Sidebar() {
           p={6}
           >
             <List spacing={6}>
-            {LinkItems.map((link) => (
-              <NextLink href={link.route}>
+            {LinkItems.map((link: any) => (
+              <NextLink href={link.route} >
                 <ListItem 
                 w={'100%'} 
                 bgColor={'transparent'} 
@@ -54,7 +55,9 @@ export default function Sidebar() {
                     }}
                 cursor="pointer"
                 fontSize="16px"
-                my={'1rem'}>
+                my={'1rem'}
+                className="cactus {{ (request()->is(link.route)) ? 'active' : '' }}"
+                >
                   <HStack>
                     <Image src={link.icon} alt={''} />
                     <Text>{link.name}</Text>
@@ -66,4 +69,3 @@ export default function Sidebar() {
         </Box>
     );
   }
-

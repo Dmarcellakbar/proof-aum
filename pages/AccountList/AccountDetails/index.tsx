@@ -14,7 +14,7 @@ export default function index() {
         <link rel="icon" href="/cfund.png" />
       </Head>
     <Layout>
-    <Box h={'150vh'} bgColor={'#121826'} pb={'2rem'}>
+    <Box h={'150vh'} bgColor={'#121826'} pb={'2rem'} ml={{ base: '4rem', md: '2rem', lg: 0 }} mr={{ base: 0, md: 0, lg: '4rem' }}>
     <AccountDetails/>
     <AssetHolding />
     </Box>

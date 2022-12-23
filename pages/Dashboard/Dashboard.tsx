@@ -17,10 +17,10 @@ export default function Dashboard() {
         {UpdateData.map((v: any) => (
         <Text
           textAlign={'right'}
-          fontSize={'16px'}
-          fontWeight={'700'}
+          fontSize={{ base: '12px', md: '16px', lg: '16px' }}
+          fontWeight={{ base: 500, md: 700, lg: 700 }}
           pt={'2rem'}
-          mr={'4rem'}>
+          mx={{ base: '2rem', md: '4rem', lg: '4rem' }}>
         Last update : {v.date}
         </Text>
         ))}
@@ -28,18 +28,19 @@ export default function Dashboard() {
             textAlign={'left'}
             fontSize={'24px'}
             fontWeight={'700'}
-            pb={'1rem'}
             ml={'4rem'}>
           Dashboard
           </chakra.h1>
-        <SimpleGrid px={'4rem'} columns={{ base: 1, md: 3 }}>
+        <SimpleGrid mx={'4rem'} spacingX={'2rem'} spacingY={'1rem'} columns={{ base: 1, md: 3 }}>
           
         <Stat
+        w={{ base: '250px', md: 'auto', lg: 'auto' }}
       px={'1rem'}
       py={'5'}
       shadow={'xl'}
       bgColor={'#212936'}
-      rounded={'lg'}>
+      rounded={'lg'}
+      >
       <Flex >
         <Box
           my={'auto'}
@@ -63,12 +64,12 @@ export default function Dashboard() {
     </Stat>
 
     <Stat
+    w={{ base: '250px', md: 'auto', lg: 'auto' }}
       px={'1rem'}
       py={'5'}
       shadow={'xl'}
       bgColor={'#212936'}
-      rounded={'lg'}
-      ml={'2rem'}>
+      rounded={'lg'}>
       <Flex >
         <Box
           my={'auto'}
@@ -92,12 +93,12 @@ export default function Dashboard() {
     </Stat>
 
     <Stat
+    w={{ base: '250px', md: 'auto', lg: 'auto' }}
       px={'1rem'}
       py={'5'}
       shadow={'xl'}
       bgColor={'#212936'}
-      rounded={'lg'}
-      ml={'2rem'}>
+      rounded={'lg'}>
       <Flex >
         <Box
           my={'auto'}

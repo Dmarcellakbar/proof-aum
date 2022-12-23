@@ -83,13 +83,13 @@ import Image from 'next/image'
   
   export default function AccountList() {
     return (
-      <Box bgColor={'#121826'} color={'white'} maxW="auto" mr={'4rem'}>
+      <Box bgColor={'#121826'} color={'white'} maxW="auto" ml={{ base: '4rem', md: '2rem' }} mr={{ base: '1rem', md: '4rem' }}>
         {UpdateData.map((v: any) => (
         <Text
             textAlign={'right'}
-            fontSize={'16px'}
-            fontWeight={'700'}
-            pt={'2rem'}>
+            fontSize={{ base: '12px', md: '16px', lg: '16px' }}
+          fontWeight={{ base: 500, md: 700, lg: 700 }}
+          pt={'2rem'}>
         Last update : {v.date}
         </Text>
         ))}

@@ -29,7 +29,8 @@ import Image from 'next/image'
         py={'5'}
         shadow={'xl'}
         bgColor={'#212936'}
-        rounded={'lg'}>
+        rounded={'lg'}
+        w={{ base: 260, md: 'auto', lg: 'auto' }}>
         <Flex >
           <Box
             my={'auto'}
@@ -76,14 +77,6 @@ import Image from 'next/image'
       </>
     );
   }
-  
-  interface LinkItemProps {
-    name: string;
-  }
-  
-  const datelist: Array<LinkItemProps> = [
-    { name: '13 Dec 2022, 14:00:50 UTC +7'},
-  ];
   
   export default function AccountList() {
     return (

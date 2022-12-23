@@ -86,7 +86,7 @@ body {
 }
 
 body {
-  color: rbg(--foreground-rgb);
+  color: "#FFFF";
   background: linear-gradient(
       to bottom,
       transparent,
@@ -104,4 +104,20 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.active{
+  background-color: #C0C0C0;
+  color: green;
+  font-weight: 500;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #574c4c;
 }
