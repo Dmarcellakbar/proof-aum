@@ -62,15 +62,15 @@ import Image from 'next/image'
         {UpdateData.map((v: any) => (
         <Text
           textAlign={'right'}
-          fontSize={'16px'}
-          fontWeight={'700'}
+          fontSize={{ base: '12px', md: '16px', lg: '16px' }}
+          fontWeight={{ base: 500, md: 700, lg: 700 }}
           pt={'2rem'}>
         Last update : {v.date}
         </Text>
         ))}
         <chakra.h1
             textAlign={'left'}
-            fontSize={'24px'}
+            fontSize={{ base: '18px', md: '24px', lg: '24px' }}
             fontWeight={'700'}
             pb={'1rem'}>
           Monthly Bank Reports

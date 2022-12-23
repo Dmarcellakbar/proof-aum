@@ -27,13 +27,13 @@ const options = {
           borderWidth: 3,
       },
   },
-  cutout: 100,
+  cutout: 90,
 }
 
 export default function DataChart () {
     return (
-    <Box px={'1rem'} py={'1rem'}>
-        <Doughnut data={chartdata} width={250} height={250} options={options} />
+    <Box px={'1rem'} py={'1rem'} width={{ base: 250, md: 300, lg: 300 }} height={{ base: 250, md: 300, lg: 300 }}>
+        <Doughnut data={chartdata} width={'auto'} height={'auto'} options={options} />
     </Box>
     );
 }

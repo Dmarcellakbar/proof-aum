@@ -13,19 +13,19 @@ function Boxcard(props: boxcardprops) {
     return (
         <Box height='40px'>
         <Flex minWidth='max-content' alignItems='center' gap='2'>
-            <Box p='2'>
+            <Box p='1'>
                 <HStack>
                 <Box color={color}>
                     <MdCircle />
                 </Box> 
-                <Heading size='md'>
+                <Heading size={{ base: 'sm', md: 'md', lg: 'md' }}>
                     {labels}
                 </Heading>
                 </HStack>
             </Box>
             <Spacer />
-            <ButtonGroup gap='2'>
-                <Text size='md'>{data}</Text>
+            <ButtonGroup gap='1'>
+                <Text size={{ base: 'sm', md: 'md', lg: 'md' }}>{data}</Text>
             </ButtonGroup>
         </Flex>
     </Box>
@@ -35,7 +35,7 @@ function Boxcard(props: boxcardprops) {
 export default function ListData() {
   return (
     <>
-    <SimpleGrid columns={2} spacing={3} mx={'1.5rem'} pt={'1rem'}>
+    <SimpleGrid columns={2} spacing={{ base: 2, md: 3 }} mx={{ base: '0.5rem', md: '1.5rem' }} pt={'1rem'}>
     {Dummydata.map((item: any) => (   
         <Boxcard key={item.labels} labels={item.labels} data={item.data} color={item.color}/>
         ))} 

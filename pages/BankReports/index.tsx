@@ -14,7 +14,7 @@ export default function index() {
         <link rel="icon" href="/cfund.png" />
       </Head>
     <Layout>
-      <Box px={'2rem'} h={'150vh'} bgColor={'#121826'}>
+      <Box h={'150vh'} bgColor={'#121826'} pl={{ base: '4rem', md: '2rem', lg: 0  }} pr={{ base: 0, md: 0, lg: '4rem'  }}>
         <BankReports/>
       </Box>
     </Layout>

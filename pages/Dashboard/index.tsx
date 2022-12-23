@@ -15,10 +15,12 @@ export default function index() {
         <link rel="icon" href="/cfund.png" />
       </Head>
     <Layout>
-      <Box h={'150vh'} bgColor={'#121826'} pb={'2rem'}>
+      <Box h={'auto'} bgColor={'#121826'} pb={'2rem'}>
       <Dashboard/>
       <TokenChart/>
+      <Box mt={'2rem'} mb={'4rem'}>
       <AccountList />
+      </Box>
       </Box>
     </Layout>
     </>

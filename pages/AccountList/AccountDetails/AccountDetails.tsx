@@ -18,8 +18,8 @@ import {
             {UpdateData.map((v: any) => (
             <Text
                 textAlign={'right'}
-                fontSize={'16px'}
-                fontWeight={'700'}
+                fontSize={{ base: '12px', md: '16px', lg: '16px' }}
+                fontWeight={{ base: 500, md: 700, lg: 700 }}
                 pt={'2rem'}>
             Last update : {v.date}
             </Text>
@@ -31,14 +31,13 @@ import {
                 pb={'1rem'}>
                     Account 1
                 </chakra.h1>
-            <SimpleGrid columns={{ base: 1, md: 2 }}>
+            <SimpleGrid spacingX={'2rem'} spacingY={'1rem'} columns={{ base: 1, md: 2 }}>
             <Stat
             px={'1rem'}
             py={'5'}
             shadow={'xl'}
             bgColor={'#212936'}
             rounded={'lg'}
-            mr={'4rem'}
             w={'auto'}>
             <Flex >
             <Box
