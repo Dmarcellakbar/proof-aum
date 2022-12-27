@@ -13,7 +13,7 @@ export default function index() {
         <link rel="icon" href="/cfund.png" />
       </Head>
     <Layout>
-      <Box h={'150vh'} bgColor={'#121826'} mb={'4rem'}>
+      <Box h={'150vh'} bgColor={'#121826'} mb={'10rem'}>
         <AccountList/>
       </Box>
     </Layout>
