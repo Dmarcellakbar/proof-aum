@@ -7,31 +7,20 @@ import {
   StatLabel,
   StatNumber,
   Text} from '@chakra-ui/react';
-import {UpdateData} from './UpdateData.json';
 import {DataUser} from './DataUser.json';
 import Image from 'next/image'
 
 export default function Dashboard() {
   return (
 <Box color={'white'} maxW="auto" >
-        {UpdateData.map((v: any) => (
-        <Text
-          textAlign={'right'}
-          fontSize={{ base: '12px', md: '16px', lg: '16px' }}
-          fontWeight={{ base: 500, md: 700, lg: 700 }}
-          pt={'2rem'}
-          mx={{ base: '2rem', md: '4rem', lg: '4rem' }}>
-        Last update : {v.date}
-        </Text>
-        ))}
         <chakra.h1
             textAlign={'left'}
             fontSize={'24px'}
             fontWeight={'700'}
-            ml={'4rem'}>
+            ml={{ base: '4rem', md: '2rem', lg: '2rem' }}>
           Dashboard
           </chakra.h1>
-        <SimpleGrid mx={'4rem'} spacingX={'2rem'} spacingY={'1rem'} columns={{ base: 1, md: 3 }}>
+        <SimpleGrid ml={{ base: '4rem', md: '2rem', lg: '2rem' }} mr={{ base: '1rem', md: '4rem', lg: '4rem' }} spacingX={'2rem'} spacingY={'1rem'} columns={{ base: 1, md: 3 }}>
           
         <Stat
         w={{ base: '250px', md: 'auto', lg: 'auto' }}

@@ -14,17 +14,16 @@ import ListData from './ListData';
         <chakra.h1
           textAlign={'left'}
           fontSize={'24px'}
-          p={4}
           fontWeight={'700'}
-          mx={'3rem'}>
+          ml={{ base: '4rem', md: '2rem', lg: '2rem' }}>
           Token Holdings
         </chakra.h1>
-        <SimpleGrid mx={'4rem'} spacingX={'2rem'} spacingY={'1rem'} columns={{ base: 1, md: 4 }}>
+        <SimpleGrid ml={{ base: '4rem', md: '2rem', lg: '2rem' }} mr={{ base: '1rem', md: '4rem', lg: '4rem' }} spacingX={'2rem'} spacingY={'1rem'} columns={{ base: 1, md: 4, lg: 6 }}>
 
-                <GridItem colSpan={{ base: 1, md: 2, lg: 1 }} bg={'#212936'} rounded={'12px'} w={{ base: 260, md: 'auto', lg: 'auto' }}>
+                <GridItem colSpan={{ base: 1, md: 2, lg: 2 }} bg={'#212936'} rounded={'12px'} w={{ base: 260, md: 'auto', lg: 'auto' }}>
                     <CircularChart />
                 </GridItem>
-                <GridItem colSpan={{ base: 1, md: 2, lg: 3 }} bg={'#212936'} rounded={'12px'} w={{ base: 260, md: 'auto', lg: 'auto' }}>
+                <GridItem colSpan={{ base: 1, md: 2, lg: 4 }} bg={'#212936'} rounded={'12px'} w={{ base: 260, md: 'auto', lg: 'auto' }}>
                     <ListData />
                 </GridItem>
         </SimpleGrid>

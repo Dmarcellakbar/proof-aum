@@ -39,7 +39,9 @@ export default function navbar() {
                 />
               </MenuButton>
               <MenuList>
+              <NextLink href={'/Setting'}>
                 <MenuItem>Setting</MenuItem>
+                </NextLink>
                 <MenuDivider />
                 <NextLink href={'/'}>
                 <MenuItem>Log out</MenuItem>

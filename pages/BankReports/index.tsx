@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 import Layout from "../../src/components/Layout";
+import Timebar from "../../src/components/Timebar/Timebar";
 import TokenChart from "../Chart/TokenChart";
 import BankReports from "./BankReports";
 
@@ -14,7 +15,8 @@ export default function index() {
         <link rel="icon" href="/cfund.png" />
       </Head>
     <Layout>
-      <Box h={'150vh'} bgColor={'#121826'} pl={{ base: '4rem', md: '2rem', lg: 0  }} pr={{ base: 0, md: 0, lg: '4rem'  }}>
+      <Box h={'150vh'} bgColor={'#121826'} ml={{ base: '4rem', md: '4rem', lg: '2rem' }}>
+        <Timebar />
         <BankReports/>
       </Box>
     </Layout>

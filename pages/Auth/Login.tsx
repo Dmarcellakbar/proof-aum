@@ -10,14 +10,22 @@ import {
     useBreakpointValue,
     IconProps,
     Icon,
+    FormControl,
+    FormLabel,
+    InputGroup,
+    InputRightElement,
   } from '@chakra-ui/react';
   import Image from 'next/image';
   import ImageLogin from '../../src/image/login.png'
   import NextLink from 'next/link'
+  import { useState } from 'react';
+  import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+
   
   export default function JoinOurTeam() {
+    const [showPassword, setShowPassword] = useState(false);
     return (
-      <Box position={'relative'} backgroundColor={'#121826'} w={'1440'} maxW={'auto'} h={'100vh'}>
+      <Box position={'relative'} backgroundColor={'#121826'} w={'1440'} maxW={'auto'} h={'150vh'}>
         <Container
           as={SimpleGrid}
           maxW={'6xl'}
@@ -33,40 +41,48 @@ import {
               <Heading
                 color={'white'}
                 lineHeight={1.1}
-                fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}>
+                fontWeight={700}
+                fontSize={'32px'}>
                 Login
               </Heading>
-              <Text color={'gray.500'} fontSize={{ base: 'sm', sm: 'md' }}>
+              <Text color={'#959BA6'} fontSize={'16px'} fontWeight={400}>
                 Please login to your account
               </Text>
             </Stack>
             <Box as={'form'} mt={10}>
               <Stack spacing={3}>
-                <Text fontWeight={'bold'} color={'white'} fontSize={{ base: 'sm', sm: 'md' }}>
-                    Email Address
-                </Text>
-                <Input
-                  placeholder="user@gmail.com"
-                  bg={'gray.700'}
-                  border={0}
-                  color={'gray.500'}
-                  _placeholder={{
-                    color: 'gray.500',
-                  }}
-                />
-                <Text fontWeight={'bold'} color={'white'} fontSize={{ base: 'sm', sm: 'md' }}>
-                    Password
-                </Text>
-                <Input
-                  type={'password'}
-                  placeholder="your password"
-                  bg={'gray.700'}
-                  border={0}
-                  color={'gray.500'}
-                  _placeholder={{
-                    color: 'gray.500',
-                  }}
-                />
+                <FormControl id="email" isRequired>
+              <FormLabel fontWeight={600} color={'white'} fontSize={'16px'}>Email address</FormLabel>
+              <Input type="email" 
+              bg={'gray.700'}
+              border={0}
+              color={'white'}
+              _placeholder={{
+                color: 'gray.500',
+              }}/>
+            </FormControl>
+            <FormControl id="password" isRequired>
+              <FormLabel fontWeight={600} color={'white'} fontSize={'16px'}>Password</FormLabel>
+              <InputGroup>
+                <Input type={showPassword ? 'text' : 'password'} 
+                bg={'gray.700'}
+                border={0}
+                color={'white'}
+                _placeholder={{
+                  color: 'gray.500',
+                }}/>
+                <InputRightElement h={'full'}>
+                  <Button
+                    variant={'ghost'}
+                    color={'gray.500'}
+                    onClick={() =>
+                      setShowPassword((showPassword) => !showPassword)
+                    }>
+                    {showPassword ? <ViewIcon /> : <ViewOffIcon />}
+                  </Button>
+                </InputRightElement>
+              </InputGroup>
+            </FormControl>
               </Stack>
               <NextLink href={'Dashboard'}>
               <Button

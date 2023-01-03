@@ -14,7 +14,6 @@ import {
     HStack,
     Spacer
   } from '@chakra-ui/react';
-import {UpdateData} from '../Dashboard/UpdateData.json';
 import {BankData} from './BankData.json';
 import Viewicon from '../../src/icons/search-status.png'
 import Downloadicon from '../../src/icons/document-download.png'
@@ -59,15 +58,6 @@ import Image from 'next/image'
   export default function BankReports() {
     return (
       <Box color={'white'} maxW="auto">
-        {UpdateData.map((v: any) => (
-        <Text
-          textAlign={'right'}
-          fontSize={{ base: '12px', md: '16px', lg: '16px' }}
-          fontWeight={{ base: 500, md: 700, lg: 700 }}
-          pt={'2rem'}>
-        Last update : {v.date}
-        </Text>
-        ))}
         <chakra.h1
             textAlign={'left'}
             fontSize={{ base: '18px', md: '24px', lg: '24px' }}
@@ -75,7 +65,7 @@ import Image from 'next/image'
             pb={'1rem'}>
           Monthly Bank Reports
           </chakra.h1>
-        <SimpleGrid columns={{ base: 1, md: 1 }}>
+        <SimpleGrid mr={{ base: '1rem', md: '4rem', lg: '4rem' }} columns={{ base: 1, md: 1 }}>
         <Stat
         bgColor={'#1E2432'}
         rounded={'16px'}

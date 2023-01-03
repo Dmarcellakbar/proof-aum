@@ -1,7 +1,8 @@
 import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 import Layout from "../../src/components/Layout";
-import AccountList from "../AccountList/AccountListDashboard";
+import Timebar from "../../src/components/Timebar/Timebar";
+import AccountList from "../AccountList/AccountList";
 import TokenChart from "../Chart";
 import Dashboard from "./Dashboard";
 
@@ -15,7 +16,8 @@ export default function index() {
         <link rel="icon" href="/cfund.png" />
       </Head>
     <Layout>
-      <Box h={'auto'} bgColor={'#121826'} pb={'2rem'}>
+      <Box bgColor={'#121826'} pb={'2rem'} ml={{ base: '2rem', md: '2rem', lg: '2rem' }}>
+      <Timebar />
       <Dashboard/>
       <TokenChart/>
       <Box mt={'2rem'} mb={'4rem'}>

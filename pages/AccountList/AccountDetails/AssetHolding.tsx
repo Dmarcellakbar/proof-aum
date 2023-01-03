@@ -58,10 +58,11 @@ import Image from 'next/image'
             textAlign={'left'}
             fontSize={'24px'}
             fontWeight={'700'}
-            pb={'1rem'}>
+            pb={'1rem'}
+            ml={{ base: '4rem', md: '2rem', lg: '2rem' }}>
           Asset Holdings
           </chakra.h1>
-        <SimpleGrid columns={{ base: 1, md: 1 }}>
+        <SimpleGrid ml={{ base: '4rem', md: '2rem', lg: '2rem' }} mr={{ base: '1rem', md: '4rem', lg: '4rem' }} columns={{ base: 1, md: 1 }}>
         <Stat
         bgColor={'#1E2432'}
         rounded={'16px'}

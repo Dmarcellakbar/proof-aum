@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 import Layout from "../../../src/components/Layout";
+import Timebar from "../../../src/components/Timebar/Timebar";
 import AccountDetails from "./AccountDetails";
 import AssetHolding from "./AssetHolding";
 
@@ -15,6 +16,7 @@ export default function index() {
       </Head>
     <Layout>
     <Box h={'150vh'} bgColor={'#121826'} pb={'2rem'} ml={{ base: '4rem', md: '2rem', lg: 0 }} mr={{ base: 0, md: 0, lg: '4rem' }}>
+    <Timebar />
     <AccountDetails/>
     <AssetHolding />
     </Box>

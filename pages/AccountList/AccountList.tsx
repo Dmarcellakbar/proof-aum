@@ -9,9 +9,9 @@ import {
     Spacer
   } from '@chakra-ui/react';
   import NextLink from 'next/link'
-import {UpdateData} from '../Dashboard/UpdateData.json';
 import {DataAccount} from './DataAccount.json'
 import Image from 'next/image'
+import { useRouter } from 'next/router';
 
   interface StatsCardProps {
     title: string;
@@ -23,16 +23,19 @@ import Image from 'next/image'
   
   function StatsCard(props: StatsCardProps) {
     const { title, stat, asset, token, link } = props;
+    const router = useRouter();
+    const currentRoute = router.pathname;
     return (
     <>
     <NextLink href={link}>
       <Stat
-        px={{ base: 2, md: 4 }}
+        px={{ base: 2, md: 2, lg: 2}}
         py={'5'}
         shadow={'xl'}
         bgColor={'#212936'}
         rounded={'lg'}
-        cursor={'pointer'}>
+        cursor={'pointer'}
+        fontSize={{base: 14,  md: 16, lg:16}}>
         <Flex >
           <Box
             my={'auto'}
@@ -43,34 +46,34 @@ import Image from 'next/image'
                 </Box>
           </Box>
           <Box>
-            <StatLabel fontSize={'16px'} fontWeight={'700'} isTruncated>
+            <StatLabel fontWeight={'700'} isTruncated>
               {title}
             </StatLabel>
-            <StatLabel fontSize={'14px'} fontWeight={'400'} color={'#8F95A1'}>
+            <StatLabel fontWeight={'400'} color={'#8F95A1'}>
               {stat}
             </StatLabel>
           </Box>
         </Flex>
         <Flex minWidth='max-content' alignItems='center' gap='2'>
                 <Box p='2'>
-                    <StatLabel fontSize={'14px'} fontWeight={'400'} color={'#8F95A1'}>
+                    <StatLabel fontWeight={'400'} color={'#8F95A1'}>
                     Total Assets
                     </StatLabel>
                 </Box>
                 <Spacer />
-                <StatLabel fontSize={'16px'} fontWeight={'700'} isTruncated>
+                <StatLabel fontWeight={'700'} isTruncated>
                     {asset}
                 </StatLabel>
             </Flex>
 
             <Flex minWidth='max-content' alignItems='center' gap='2'>
                 <Box p='2'>
-                    <StatLabel fontSize={'14px'} fontWeight={'400'} color={'#8F95A1'}>
+                    <StatLabel fontWeight={'400'} color={'#8F95A1'}>
                     Token Holding
                     </StatLabel>
                 </Box>
                 <Spacer />
-                <StatLabel fontSize={'16px'} fontWeight={'700'} isTruncated>
+                <StatLabel fontWeight={'700'} isTruncated>
                     {token}
                 </StatLabel>
             </Flex>
@@ -83,16 +86,7 @@ import Image from 'next/image'
   
   export default function AccountList() {
     return (
-      <Box bgColor={'#121826'} color={'white'} maxW="auto" ml={{ base: '4rem', md: '2rem' }} mr={{ base: '1rem', md: '4rem' }}>
-        {UpdateData.map((v: any) => (
-        <Text
-            textAlign={'right'}
-            fontSize={{ base: '12px', md: '16px', lg: '16px' }}
-          fontWeight={{ base: 500, md: 700, lg: 700 }}
-          pt={'2rem'}>
-        Last update : {v.date}
-        </Text>
-        ))}
+      <Box bgColor={'#121826'} color={'white'} maxW="auto" ml={{ base: '4rem', md: '2rem', lg: '2rem' }} mr={{ base: '1rem', md: '4rem', lg: '4rem' }}>
         <chakra.h1
           textAlign={'left'}
           fontSize={'24px'}
