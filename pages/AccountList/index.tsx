@@ -1,8 +1,15 @@
 import { Box } from "@chakra-ui/react";
 import Head from "next/head";
-import Layout from "../../src/components/Layout";
-import Timebar from "../../src/components/Timebar/Timebar";
-import AccountList from "./AccountList";
+import dynamic from 'next/dynamic'
+const AccountList = dynamic(() => import("./AccountList"), {
+  suspense: true,
+});
+const Layout = dynamic(() => import("../../src/components/Layout"), {
+  suspense: true,
+});
+const Timebar = dynamic(() => import("../../src/components/Timebar/Timebar"), {
+  suspense: true,
+});
 
 export default function index() {
   return (
