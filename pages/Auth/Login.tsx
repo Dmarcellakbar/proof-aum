@@ -104,7 +104,7 @@ import {
 
           <Stack 
             spacing={{ base: 10, md: 20 }}>
-                <Image src={ImageLogin} alt={'image login'} style={{ borderRadius: '24px' }}/>
+                <Image src={ImageLogin} alt={'image login'} style={{ borderRadius: '24px' }} loading="lazy"/>
           </Stack>
           
         </Container>

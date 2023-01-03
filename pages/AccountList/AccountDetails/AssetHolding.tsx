@@ -32,7 +32,7 @@ import Image from 'next/image'
               <Td>
                 <HStack>
                 <Box w={'24px'} mr={'1rem'}>
-                <Image src={icon} alt={'view'} width={24} height={24}/>
+                <Image src={icon} alt={'view'} width={24} height={24} loading="lazy"/>
                 </Box>
                 <Text fontSize={'16px'} fontWeight={'600'}>
                 {assets}</Text>

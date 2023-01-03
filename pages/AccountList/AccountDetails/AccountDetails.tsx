@@ -36,7 +36,7 @@ import {
                 color={'white'}
                 alignContent={'center'}>
                 <Box w={'32px'} cursor={'pointer'} mr={'1rem'}>
-                    <Image src={'/dollar-circle.png'} alt={'view'} width={32} height={32}/>
+                    <Image src={'/dollar-circle.png'} alt={'view'} width={32} height={32} loading="lazy"/>
                     </Box>
             </Box>
             <Box>
@@ -64,7 +64,7 @@ import {
                 color={'white'}
                 alignContent={'center'}>
                 <Box w={'32px'} cursor={'pointer'} mr={'1rem'}>
-                    <Image src={'/bitcoin.png'} alt={'view'} width={32} height={32}/>
+                    <Image src={'/bitcoin.png'} alt={'view'} width={32} height={32} loading="lazy"/>
                     </Box>
             </Box>
             <Box>

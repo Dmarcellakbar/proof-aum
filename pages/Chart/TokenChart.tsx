@@ -5,8 +5,10 @@ import {
     GridItem,
     SimpleGrid
   } from '@chakra-ui/react';
-import CircularChart from './CircularChart';
-import ListData from './ListData';
+import dynamic from 'next/dynamic'
+const CircularChart = dynamic(() => import("./CircularChart"));
+const ListData = dynamic(() => import("./ListData"));
+
 
   export default function TokenChart() {
     return (

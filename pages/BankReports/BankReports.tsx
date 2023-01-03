@@ -33,7 +33,7 @@ import Image from 'next/image'
               <Td>
                 <HStack>
                 <Box w={'24px'} cursor={'pointer'} mr={'1rem'}>
-                <Image src={Reporticon} alt={'view'} />
+                <Image src={Reporticon} alt={'view'} loading="lazy"/>
                 </Box>
                 <Text fontSize={'16px'} fontWeight={'600'}>
                 {title}</Text>
@@ -43,10 +43,10 @@ import Image from 'next/image'
                 <HStack >
                 <Spacer />
                 <Box w={'24px'} cursor={'pointer'} mr={'1rem'}>
-                <Image src={Viewicon} alt={'view'} />
+                <Image src={Viewicon} alt={'view'} loading="lazy"/>
                 </Box>
                 <Box w={'24px'} cursor={'pointer'}>
-                <Image src={Downloadicon} alt={'download'} />
+                <Image src={Downloadicon} alt={'download'} loading="lazy"/>
                 </Box>
                 </HStack>
               </Td>

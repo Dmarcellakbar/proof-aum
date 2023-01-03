@@ -36,7 +36,7 @@ export default function Dashboard() {
           color={'white'}
           alignContent={'center'}>
             <Box w={'32px'} cursor={'pointer'} mr={'0.5rem'}>
-                <Image src={'/dollar-circle.png'} alt={'view'} width={32} height={32}/>
+                <Image src={'/dollar-circle.png'} alt={'view'} width={32} height={32} loading="lazy"/>
                 </Box>
         </Box>
         <Box>
@@ -65,7 +65,7 @@ export default function Dashboard() {
           color={'white'}
           alignContent={'center'}>
             <Box w={'32px'} cursor={'pointer'} mr={'0.5rem'}>
-                <Image src={'/wallet-dash.png'} alt={'view'} width={32} height={32}/>
+                <Image src={'/wallet-dash.png'} alt={'view'} width={32} height={32} loading="lazy"/>
                 </Box>
         </Box>
         <Box>
@@ -94,7 +94,7 @@ export default function Dashboard() {
           color={'white'}
           alignContent={'center'}>
             <Box w={'32px'} cursor={'pointer'} mr={'0.5rem'}>
-                <Image src={'/bitcoin.png'} alt={'view'} width={32} height={32}/>
+                <Image src={'/bitcoin.png'} alt={'view'} width={32} height={32} loading="lazy"/>
                 </Box>
         </Box>
         <Box>

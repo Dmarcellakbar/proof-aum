@@ -42,7 +42,7 @@ import { useRouter } from 'next/router';
             color={'white'}
             alignContent={'center'}>
               <Box w={'48px'} cursor={'pointer'} mr={'1rem'}>
-                <Image src={'/walleticon.png'} alt={'wallet'} width={48} height={48}/>
+                <Image src={'/walleticon.png'} alt={'wallet'} width={48} height={48} loading="lazy"/>
                 </Box>
           </Box>
           <Box>
