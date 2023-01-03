@@ -1,21 +1,11 @@
 import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 import dynamic from 'next/dynamic'
-const Dashboard = dynamic(() => import("./Dashboard"), {
-  suspense: true,
-});
-const TokenChart = dynamic(() => import("../Chart"), {
-  suspense: true,
-});
-const AccountList = dynamic(() => import("../AccountList/AccountList"), {
-  suspense: true,
-});
-const Layout = dynamic(() => import("../../src/components/Layout"), {
-  suspense: true,
-});
-const Timebar = dynamic(() => import("../../src/components/Timebar/Timebar"), {
-  suspense: true,
-});
+const Dashboard = dynamic(() => import("./Dashboard"));
+const TokenChart = dynamic(() => import("../Chart"));
+const AccountList = dynamic(() => import("../AccountList/AccountList"));
+const Layout = dynamic(() => import("../../src/components/Layout"));
+const Timebar = dynamic(() => import("../../src/components/Timebar/Timebar"));
 
 export default function index() {
   return (

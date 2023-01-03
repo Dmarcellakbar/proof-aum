@@ -1,8 +1,6 @@
 import Head from 'next/head'
-import React, { lazy } from 'react';
-
-const Login = React.lazy(() => import('./Auth/Login'));
-
+import dynamic from 'next/dynamic'
+const Login = dynamic(() => import("./Auth/Login"));
 export default function Home() {
   return (
     <>
