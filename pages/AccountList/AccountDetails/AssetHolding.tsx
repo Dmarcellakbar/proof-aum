@@ -12,7 +12,7 @@ import {
     Thead,
     Tr,
     HStack  } from '@chakra-ui/react';
-import {AssetData} from './AssetData';
+import {AssetData} from './AssetData.json';
 import Image from 'next/image'
 
   interface StatsCardProps {

@@ -7,7 +7,7 @@ import {
   StatLabel,
   StatNumber,
   Text} from '@chakra-ui/react';
-import {DataUser} from './DataUser';
+import {DataUser} from './DataUser.json';
 import Image from 'next/image'
 
 export default function Dashboard() {

@@ -23,7 +23,7 @@ import {
     ModalFooter,
     ModalHeader
   } from '@chakra-ui/react';
-import {BankData} from './BankData';
+import {BankData} from './BankData.json';
 import Viewicon from '../../src/icons/search-status.png'
 import Downloadicon from '../../src/icons/document-download.png'
 import Reporticon from '../../src/icons/document-text.png'
@@ -178,7 +178,7 @@ import React from 'react';
             </Tr>
           </Thead>
         {BankData.map((item) => (
-          <StatsCard title={item.title} date={item.date}/>
+          <StatsCard key={item.id} title={item.title} date={item.date}/>
         ))} 
             </Table>
         </TableContainer>

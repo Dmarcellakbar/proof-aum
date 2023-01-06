@@ -1,7 +1,7 @@
 import { SimpleGrid, Box, Text, ButtonGroup, Flex, Heading, Spacer, HStack } from '@chakra-ui/react'
 import React from 'react'
 import {MdCircle} from 'react-icons/md'
-import {DummyData} from './DummyData';
+import {DummyData} from './DummyData.json';
 interface boxcardprops {
     labels: string;
     data: string;

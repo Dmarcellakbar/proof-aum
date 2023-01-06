@@ -1,4 +1,4 @@
-import {UpdateData} from './UpdateData';
+import {UpdateData} from './UpdateData.json';
 import {
     Text} from '@chakra-ui/react';
 export default function index() {

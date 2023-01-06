@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import 'chart.js/auto'; 
 import { Doughnut } from "react-chartjs-2";
-import { DummyData } from './DummyData';
+import { DummyData } from './DummyData.json';
 
 export default function DataChart () {
     const chartdata  = {

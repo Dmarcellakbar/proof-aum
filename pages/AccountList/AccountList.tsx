@@ -8,7 +8,7 @@ import {
     Spacer
   } from '@chakra-ui/react';
   import NextLink from 'next/link'
-import {DataAccount} from './DataAccount'
+import {DataAccount} from './DataAccount.json'
 import Image from 'next/image'
 import { useRouter } from 'next/router';
 
