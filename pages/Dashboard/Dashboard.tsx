@@ -7,7 +7,7 @@ import {
   StatLabel,
   StatNumber,
   Text} from '@chakra-ui/react';
-import {DataUser} from './DataUser.json';
+import {DataUser} from './DataUser';
 import Image from 'next/image'
 
 export default function Dashboard() {
@@ -45,7 +45,7 @@ export default function Dashboard() {
           </StatLabel>
           {DataUser.map((v)=>
           <StatNumber fontSize={{ base: '22px', md: '22px', lg: '24px' }} fontWeight={'700'}>
-          {v.Asset}
+          ${v.Asset}
           </StatNumber>
           )}
         </Box>

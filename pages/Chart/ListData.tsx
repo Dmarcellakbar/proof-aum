@@ -1,7 +1,7 @@
 import { SimpleGrid, Box, Text, ButtonGroup, Flex, Heading, Spacer, HStack } from '@chakra-ui/react'
 import React from 'react'
 import {MdCircle} from 'react-icons/md'
-import {Dummydata} from './DummyData.json';
+import {DummyData} from './DummyData';
 interface boxcardprops {
     labels: string;
     data: string;
@@ -36,8 +36,8 @@ export default function ListData() {
   return (
     <>
     <SimpleGrid columns={2} spacing={{ base: 2, md: 3 }} mx={{ base: '0.5rem', md: '1.5rem' }} pt={'1rem'}>
-    {Dummydata.map((item: any) => (   
-        <Boxcard key={item.labels} labels={item.labels} data={item.data} color={item.color}/>
+    {DummyData.map((item: any) => (   
+        <Boxcard key={item.id} labels={item.labels} data={item.data} color={item.color}/>
         ))} 
     </SimpleGrid>
     </>

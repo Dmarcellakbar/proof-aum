@@ -5,11 +5,10 @@ import {
     SimpleGrid,
     Stat,
     StatLabel,
-    Text,
     Spacer
   } from '@chakra-ui/react';
   import NextLink from 'next/link'
-import {DataAccount} from './DataAccount.json'
+import {DataAccount} from './DataAccount'
 import Image from 'next/image'
 import { useRouter } from 'next/router';
 
@@ -62,7 +61,7 @@ import { useRouter } from 'next/router';
                 </Box>
                 <Spacer />
                 <StatLabel fontWeight={'700'} isTruncated>
-                    {asset}
+                    ${asset}
                 </StatLabel>
             </Flex>
 
