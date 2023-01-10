@@ -1,10 +1,12 @@
-import {UpdateData} from './UpdateData.json';
+// import {UpdateData} from './UpdateData.json';
 import {
     Text} from '@chakra-ui/react';
+import {Timedata} from '../../DummyData/Timedata' 
+
 export default function index() {
   return (
     <>
-    {UpdateData.map((v: any) => (
+    {Timedata.map((v: any) => (
         <Text
           color={'white'}
           textAlign={'right'}
