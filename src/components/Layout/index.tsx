@@ -32,11 +32,11 @@ export default function index({children}:any) {
             </Box>
           </Show>
         </GridItem>
-        <GridItem colSpan={4} px={'1rem'} pt={'5rem'} area={'main'} w={'100%'}>
+        <GridItem colSpan={4} px={'1rem'} pt={'5rem'} mb={'3rem'} area={'main'} w={'100%'}>
             {children}
         </GridItem>
         <GridItem area={'footer'}>
-            Footer
+            {''}
         </GridItem>
     </Grid>
   )

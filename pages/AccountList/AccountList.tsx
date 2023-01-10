@@ -10,23 +10,20 @@ import {
   import NextLink from 'next/link'
 import {DataAccount} from './DataAccount.json'
 import Image from 'next/image'
-import { useRouter } from 'next/router';
 
   interface StatsCardProps {
+    id: string;
     title: string;
     stat: string;
     asset: string;
     token: string;
-    link: string;
   }
   
   function StatsCard(props: StatsCardProps) {
-    const { title, stat, asset, token, link } = props;
-    const router = useRouter();
-    const currentRoute = router.pathname;
+    const { title, stat, asset, token, id } = props;
     return (
     <>
-    <NextLink href={link}>
+    <NextLink key={id} href={'/AccountList/AccountDetails/'+id}>
       <Stat
         px={{ base: 2, md: 2, lg: 2}}
         py={'5'}
@@ -96,7 +93,7 @@ import { useRouter } from 'next/router';
         <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={{ base: 5, lg: 8 }}>
         {DataAccount.map((item: any) => (
           <StatsCard
-            link={item.link}
+            id={item.id}
             title={item.title}
             stat={item.stat} 
             asset={item.asset}
