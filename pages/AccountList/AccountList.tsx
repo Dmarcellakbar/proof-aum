@@ -8,7 +8,7 @@ import {
     Spacer
   } from '@chakra-ui/react';
   import NextLink from 'next/link'
-import {DataAccount} from './DataAccount.json'
+import {DataAccount} from '../../src/DummyData/DataAccount'
 import Image from 'next/image'
 
   interface StatsCardProps {

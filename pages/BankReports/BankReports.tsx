@@ -23,7 +23,7 @@ import {
     ModalFooter,
     ModalHeader
   } from '@chakra-ui/react';
-import {BankData} from './BankData.json';
+import {BankData} from '../../src/DummyData/BankData';
 import Viewicon from '../../src/icons/search-status.png'
 import Downloadicon from '../../src/icons/document-download.png'
 import Reporticon from '../../src/icons/document-text.png'
