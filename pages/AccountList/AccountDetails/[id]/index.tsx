@@ -1,13 +1,15 @@
 // pages/post/[id].js 
 
 import { chakra, SimpleGrid, Stat, Flex, StatLabel, StatNumber, Box, Button, Text } from '@chakra-ui/react';
-import { getPostDetails, getPostIdList } from './post';
+import { getPostDetails, getPostIdList } from '../../../../src/DummyData/post';
 import Image from 'next/image'
 import Layout from '../../../../src/components/Layout';
 import Timebar from '../../../../src/components/Timebar/Timebar';
 import AssetHolding from '../AssetHolding';
 import Link from 'next/link';
 import { ArrowLeftIcon } from '@chakra-ui/icons';
+
+
 
 export async function getStaticPaths() {
   const paths = await getPostIdList();
