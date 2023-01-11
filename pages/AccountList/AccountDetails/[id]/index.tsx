@@ -1,13 +1,10 @@
-// pages/post/[id].js 
-
 import { chakra, SimpleGrid, Stat, Flex, StatLabel, StatNumber, Box, Button, Text } from '@chakra-ui/react';
 import { getPostDetails, getPostIdList } from '../../../../src/DummyData/post';
 import Image from 'next/image'
 import Layout from '../../../../src/components/Layout';
 import Timebar from '../../../../src/components/Timebar/Timebar';
 import AssetHolding from '../AssetHolding';
-import Link from 'next/link';
-import { ArrowLeftIcon } from '@chakra-ui/icons';
+import Breadcrumb from '../../../../src/components/Breadcrumb/Breadcrumb';
 
 
 
@@ -34,12 +31,15 @@ export default function Post({ postData }: any) {
     <Layout >
     <Timebar />
     <Box color={'white'} maxW="auto" h={'150vh'} >
-      <Box ml={{ base: '3rem', md: '2rem', lg: '2rem' }} w={50}>
+      {/* <Box ml={{ base: '3rem', md: '2rem', lg: '2rem' }} w={50}>
       <div className='addhov' style={{width: '100px'}}>
       <Link href={'/AccountList'}>
       <Button colorScheme='transparent' ><ArrowLeftIcon /><Text ml={2}>Back</Text></Button>
       </Link>
       </div>
+      </Box> */}
+      <Box ml={{base: '2rem', md: '1rem', lg: '1rem'}}>
+      <Breadcrumb children1={'AccountList'} children2={'Details'}/>
       </Box>
             <chakra.h1
                 textAlign={'left'}

@@ -29,6 +29,7 @@ import Downloadicon from '../../src/icons/document-download.png'
 import Reporticon from '../../src/icons/document-text.png'
 import Image from 'next/image'
 import React from 'react';
+import Breadcrumb from '../../src/components/Breadcrumb/Breadcrumb';
 
   interface StatsCardProps {
     title: string;
@@ -140,7 +141,8 @@ import React from 'react';
     
     return (
       <>
-      <Box color={'white'} maxW="auto">
+      <Box color={'white'} maxW="auto"  h={'150vh'}>
+      <Breadcrumb children2={'Bank Report'}/>
         <chakra.h1
             textAlign={'left'}
             fontSize={{ base: '18px', md: '24px', lg: '24px' }}
