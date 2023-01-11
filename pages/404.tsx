@@ -4,14 +4,14 @@ import Image from 'next/image'
 
 export default function NotFound() {
   return (
-    <Box textAlign="center" py={10} px={6} bgColor={'#121826'} color={'white'}>
+    <Box h={'100vh'} textAlign="center" py={10} px={6} bgColor={'#121826'} color={'white'}>
       <Heading
         display="inline-block"
         as="h2"
         size="2xl"
         bgGradient="linear(to-r, teal.400, teal.600)"
         backgroundClip="text">
-        <Image src={'/error.png'} alt={'error'} width={500} height={500}/>
+        <Image src={'/error.png'} alt={'error'} width={500} height={500} className={'zoom-in-zoom-out'}/>
       </Heading>
       <Text fontSize="18px" mt={3} mb={2}>
         Page Not Found
