@@ -29,7 +29,7 @@ import { Show } from '@chakra-ui/react'
 
       <Link
         href='/AccountList'
-        className={currentRoute === '/AccountList' ? 'active' : 'nonActive'}
+        className={currentRoute === '/AccountList' || '/AccountList/AccountList' ? 'active' : 'nonActive'}
       >
          <HStack
          _hover={{

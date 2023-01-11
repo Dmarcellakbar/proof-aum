@@ -6,8 +6,6 @@ import Timebar from '../../../../src/components/Timebar/Timebar';
 import AssetHolding from '../AssetHolding';
 import Breadcrumb from '../../../../src/components/Breadcrumb/Breadcrumb';
 
-
-
 export async function getStaticPaths() {
   const paths = await getPostIdList();
   return {
