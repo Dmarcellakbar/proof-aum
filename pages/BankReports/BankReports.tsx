@@ -61,7 +61,7 @@ import React from 'react';
     return (
       <>
           <Tbody bgColor={'#1E2432'} >
-            <Tr className='bankhov' cursor={'pointer'}>
+            <Tr className='bankhov'>
               <Td>
                 <HStack>
                 <Box w={'24px'} cursor={'pointer'} mr={'1rem'}>
@@ -77,7 +77,6 @@ import React from 'react';
                 <Box 
                   w={'24px'} 
                   cursor={'pointer'} 
-                  mr={'1rem'} 
                   onClick={() => {
                   setOverlay(<OverlayOne />)
                   onOpenView()

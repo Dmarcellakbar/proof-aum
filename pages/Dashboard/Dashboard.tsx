@@ -23,6 +23,7 @@ export default function Dashboard() {
         <SimpleGrid ml={{ base: '4rem', md: '2rem', lg: '2rem' }} mr={{ base: '1rem', md: '4rem', lg: '4rem' }} spacingX={'2rem'} spacingY={'1rem'} columns={{ base: 1, md: 3 }}>
           
         <Stat
+        className='borderbox'
         w={{ base: '250px', md: 'auto', lg: 'auto' }}
       px={'1rem'}
       py={'5'}
@@ -35,7 +36,7 @@ export default function Dashboard() {
           my={'auto'}
           color={'white'}
           alignContent={'center'}>
-            <Box w={'32px'} cursor={'pointer'} mr={'0.5rem'}>
+            <Box w={'32px'} cursor={'pointer'} mr={'1rem'}>
                 <Image src={'/dollar-circle.png'} alt={'view'} width={32} height={32} loading="lazy"/>
                 </Box>
         </Box>
@@ -58,13 +59,14 @@ export default function Dashboard() {
       py={'5'}
       shadow={'xl'}
       bgColor={'#212936'}
-      rounded={'lg'}>
+      rounded={'lg'}
+      className='borderbox'>
       <Flex >
         <Box
           my={'auto'}
           color={'white'}
           alignContent={'center'}>
-            <Box w={'32px'} cursor={'pointer'} mr={'0.5rem'}>
+            <Box w={'32px'} cursor={'pointer'} mr={'1rem'}>
                 <Image src={'/wallet-dash.png'} alt={'view'} width={32} height={32} loading="lazy"/>
                 </Box>
         </Box>
@@ -87,13 +89,14 @@ export default function Dashboard() {
       py={'5'}
       shadow={'xl'}
       bgColor={'#212936'}
-      rounded={'lg'}>
+      rounded={'lg'}
+      className='borderbox'>
       <Flex >
         <Box
           my={'auto'}
           color={'white'}
           alignContent={'center'}>
-            <Box w={'32px'} cursor={'pointer'} mr={'0.5rem'}>
+            <Box w={'32px'} cursor={'pointer'} mr={'1rem'}>
                 <Image src={'/bitcoin.png'} alt={'view'} width={32} height={32} loading="lazy"/>
                 </Box>
         </Box>

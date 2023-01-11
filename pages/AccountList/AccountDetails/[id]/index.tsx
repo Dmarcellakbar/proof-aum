@@ -56,7 +56,8 @@ export default function Post({ postData }: any) {
             shadow={'xl'}
             bgColor={'#212936'}
             rounded={'lg'}
-            w={'auto'}>
+            w={'auto'}
+            className='borderbox'>
             <Flex >
             <Box
                 my={'auto'}
@@ -82,7 +83,8 @@ export default function Post({ postData }: any) {
             py={'5'}
             shadow={'xl'}
             bgColor={'#212936'}
-            rounded={'lg'}>
+            rounded={'lg'}
+            className='borderbox'>
             <Flex >
             <Box
                 my={'auto'}
