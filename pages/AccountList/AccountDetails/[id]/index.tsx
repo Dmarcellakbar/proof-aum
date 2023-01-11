@@ -34,10 +34,12 @@ export default function Post({ postData }: any) {
     <Layout >
     <Timebar />
     <Box color={'white'} maxW="auto" h={'150vh'} >
-      <Box ml={{ base: '3rem', md: '2rem', lg: '2rem' }}>
+      <Box ml={{ base: '3rem', md: '2rem', lg: '2rem' }} w={50}>
+      <div className='addhov' style={{width: '100px'}}>
       <Link href={'/AccountList'}>
-      <Button colorScheme='transparent'><ArrowLeftIcon /><Text ml={2}>Back</Text></Button>
+      <Button colorScheme='transparent' ><ArrowLeftIcon /><Text ml={2}>Back</Text></Button>
       </Link>
+      </div>
       </Box>
             <chakra.h1
                 textAlign={'left'}

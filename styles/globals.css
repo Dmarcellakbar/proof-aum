@@ -119,3 +119,51 @@ a {
   background: transparent;
   font-weight: 700;
 }
+
+.addhov {
+  color:#fff;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.addhov:hover {
+  box-shadow:
+    inset 0 0 30px whitesmoke,
+    inset 10px 0 40px #f0f,
+    inset -10px 0 80px #0ff,
+    inset 10px 0 150px #f0f,
+    inset -10px 0 150px #0ff,
+    0 0 25px #fff,
+    -10px 0 40px #f0f,
+    10px 0 40px #0ff;
+  text-shadow:0px 0px 30px #6B57F4;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  border-radius: 30%;
+}
+
+.bankhov {
+  color:#fff;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.bankhov:hover {
+  box-shadow:
+    inset 0 0 30px whitesmoke,
+    inset 10px 0 40px #6B57F4,
+    inset -10px 0 80px #6B57F4,
+    inset 10px 0 150px #6B57F4,
+    inset -10px 0 150px #6B57F4;
+  text-shadow:0px 0px 30px #6B57F4;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}

@@ -61,7 +61,7 @@ import React from 'react';
     return (
       <>
           <Tbody bgColor={'#1E2432'} >
-            <Tr>
+            <Tr className='bankhov' cursor={'pointer'}>
               <Td>
                 <HStack>
                 <Box w={'24px'} cursor={'pointer'} mr={'1rem'}>
@@ -178,7 +178,9 @@ import React from 'react';
             </Tr>
           </Thead>
         {BankData.map((item) => (
+          <>
           <StatsCard key={item.id} title={item.title} date={item.date}/>
+          </>
         ))} 
             </Table>
         </TableContainer>

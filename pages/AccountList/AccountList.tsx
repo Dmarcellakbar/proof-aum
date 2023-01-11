@@ -92,6 +92,7 @@ import Image from 'next/image'
         </chakra.h1>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={{ base: 5, lg: 8 }}>
         {DataAccount.map((item: any) => (
+          <div className='addhov'>
           <StatsCard
             id={item.id}
             title={item.title}
@@ -99,6 +100,7 @@ import Image from 'next/image'
             asset={item.asset}
             token={item.token}
           />
+          </div>
         ))}
         </SimpleGrid>
       </Box>
