@@ -10,7 +10,8 @@ import { Show } from '@chakra-ui/react'
     const currentRoute = router.pathname;
     return (
       <>
-        <Link href='/Dashboard' className={currentRoute === '/Dashboard' ? 'active' : 'nonActive'}>
+        <Link href='/Dashboard' 
+        className={currentRoute === '/Dashboard' ? 'active' : 'nonActive'}>
         <HStack
         _hover={{
           bg: 'cyan.400',
@@ -29,7 +30,7 @@ import { Show } from '@chakra-ui/react'
 
       <Link
         href='/AccountList'
-        className={currentRoute === '/AccountList' || '/AccountList/AccountList' ? 'active' : 'nonActive'}
+        className={currentRoute === '/AccountList' ? 'active': 'nonactive' }
       >
          <HStack
          _hover={{
