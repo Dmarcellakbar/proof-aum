@@ -29,7 +29,10 @@ import Downloadicon from '../../src/icons/document-download.png'
 import Reporticon from '../../src/icons/document-text.png'
 import Image from 'next/image'
 import React from 'react';
-import Breadcrumb from '../../src/components/Breadcrumb/Breadcrumb';
+import dynamic from 'next/dynamic'
+const PagePublic = dynamic(() => import("../../src/components/PagePublic"));
+const Titlepage = dynamic(() => import("../../src/components/TitlePage"));
+const Breadcrumb = dynamic(() => import("../../src/components/Breadcrumb"));
 
   interface StatsCardProps {
     title: string;
@@ -140,16 +143,9 @@ import Breadcrumb from '../../src/components/Breadcrumb/Breadcrumb';
   export default function BankReports() {
     
     return (
-      <>
-      <Box color={'white'} maxW="auto"  h={'150vh'}>
+      <PagePublic>
       <Breadcrumb children2={'Bank Report'}/>
-        <chakra.h1
-            textAlign={'left'}
-            fontSize={{ base: '18px', md: '24px', lg: '24px' }}
-            fontWeight={'700'}
-            pb={'1rem'}>
-          Monthly Bank Reports
-          </chakra.h1>
+        <Titlepage child1={'Bank Reports'}/>
         <SimpleGrid mr={{ base: '1rem', md: '4rem', lg: '4rem' }} columns={{ base: 1, md: 1 }}>
         <Stat
         bgColor={'#1E2432'}
@@ -187,7 +183,6 @@ import Breadcrumb from '../../src/components/Breadcrumb/Breadcrumb';
         </TableContainer>
         </Stat>
         </SimpleGrid>
-      </Box>
-      </>
+      </PagePublic>
     );
   }

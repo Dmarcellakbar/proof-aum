@@ -1,11 +1,9 @@
-import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 import dynamic from 'next/dynamic'
-const Dashboard = dynamic(() => import("./Dashboard"));
-const TokenChart = dynamic(() => import("../Chart"));
+import { Box } from "@chakra-ui/react";
 const AccountList = dynamic(() => import("../AccountList/AccountList"));
+const Dashboard = dynamic(() => import("./Dashboard"));
 const Layout = dynamic(() => import("../../src/components/Layout"));
-const Timebar = dynamic(() => import("../../src/components/Timebar/Timebar"));
 
 export default function index() {
   return (
@@ -17,14 +15,7 @@ export default function index() {
         <link rel="icon" href="/cfund.png" />
       </Head>
     <Layout>
-      <Box bgColor={'#121826'} pb={'2rem'} ml={{ base: '2rem', md: '2rem', lg: '2rem' }}>
-      <Timebar />
       <Dashboard/>
-      <TokenChart/>
-      <Box mt={'2rem'} mb={'4rem'}>
-      <AccountList />
-      </Box>
-      </Box>
     </Layout>
     </>
   )

@@ -1,122 +1,37 @@
 import {
   Box,
-  chakra,
-  Flex,
-  SimpleGrid,
-  Stat,
-  StatLabel,
-  StatNumber,
-  Text} from '@chakra-ui/react';
+  SimpleGrid} from '@chakra-ui/react';
 import {DataUser} from '../../src/DummyData/DataUser';
-import Image from 'next/image'
-import Breadcrumb from '../../src/components/Breadcrumb/Breadcrumb';
+import dynamic from 'next/dynamic'
+const PagePublic = dynamic(() => import("../../src/components/PagePublic"));
+const Boxtab = dynamic(() => import ('../../src/components/Boxtab'));
+const Titlepage = dynamic(() =>import ('../../src/components/TitlePage'));
+const Breadcrumb = dynamic(() => import("../../src/components/Breadcrumb"));
+const TokenChart = dynamic(() => import("../Chart"));
+const Timebar = dynamic(() => import("../../src/components/Timebar/Timebar"));
+const AccountList = dynamic(() => import("../AccountList/AccountList"));
 
 export default function Dashboard() {
   return (
-<Box color={'white'} maxW="auto" >
-  <Box ml={{base: '2rem', md: '1rem', lg: '1rem'}}>
+<PagePublic>
+<Timebar />
 <Breadcrumb children2={'Dashboard'}/>
+<Box ml={{ base: '1rem', md: '2rem', lg: '1rem' }}>
+<Titlepage child1={'Dashboard'}/>
 </Box>
-        <chakra.h1
-            textAlign={'left'}
-            fontSize={'24px'}
-            fontWeight={'700'}
-            ml={{ base: '4rem', md: '2rem', lg: '2rem' }}>
-          Dashboard
-          </chakra.h1>
-        <SimpleGrid ml={{ base: '4rem', md: '2rem', lg: '2rem' }} mr={{ base: '1rem', md: '4rem', lg: '4rem' }} spacingX={'1rem'} spacingY={'1rem'} columns={{ base: 1, md: 3 }}>
-          
-        <Stat
-        className='borderbox'
-        w={{ base: '250px', md: 'auto', lg: 'auto' }}
-      px={'1rem'}
-      py={'5'}
-      shadow={'xl'}
-      bgColor={'#212936'}
-      rounded={'lg'}
-      >
-      <Flex >
-        <Box
-          my={'auto'}
-          color={'white'}
-          alignContent={'center'}>
-            <Box w={'32px'} cursor={'pointer'} mr={{base: '1rem', md: '0.5rem', lg: '1rem'}}>
-                <Image src={'/dollar-circle.png'} alt={'view'} width={32} height={32} loading="lazy"/>
-                </Box>
-        </Box>
-        <Box>
-          <StatLabel color={'#959BA6'} fontWeight={'400'} isTruncated>
-          Exchange Assets
-          </StatLabel>
-          {DataUser.map((v)=>
-          <StatNumber fontSize={{ base: '22px', md: '22px', lg: '24px' }} fontWeight={'700'}>
-          ${v.Asset}
-          </StatNumber>
-          )}
-        </Box>
-      </Flex>
-    </Stat>
-
-    <Stat
-    w={{ base: '250px', md: 'auto', lg: 'auto' }}
-      px={'1rem'}
-      py={'5'}
-      shadow={'xl'}
-      bgColor={'#212936'}
-      rounded={'lg'}
-      className='borderbox'>
-      <Flex >
-        <Box
-          my={'auto'}
-          color={'white'}
-          alignContent={'center'}>
-            <Box w={'32px'} cursor={'pointer'} mr={'1rem'}>
-                <Image src={'/wallet-dash.png'} alt={'view'} width={32} height={32} loading="lazy"/>
-                </Box>
-        </Box>
-        <Box>
-          <StatLabel color={'#959BA6'} fontWeight={'400'} isTruncated>
-          Account Totals
-          </StatLabel>
-          {DataUser.map((v)=>
-          <StatNumber fontSize={'24px'} fontWeight={'700'}>
-          {v.Account}
-          </StatNumber>
-          )}
-        </Box>
-      </Flex>
-    </Stat>
-
-    <Stat
-    w={{ base: '250px', md: 'auto', lg: 'auto' }}
-      px={'1rem'}
-      py={'5'}
-      shadow={'xl'}
-      bgColor={'#212936'}
-      rounded={'lg'}
-      className='borderbox'>
-      <Flex >
-        <Box
-          my={'auto'}
-          color={'white'}
-          alignContent={'center'}>
-            <Box w={'32px'} cursor={'pointer'} mr={'1rem'}>
-                <Image src={'/bitcoin.png'} alt={'view'} width={32} height={32} loading="lazy"/>
-                </Box>
-        </Box>
-        <Box>
-          <StatLabel color={'#959BA6'} fontWeight={'400'} isTruncated>
-          Tokens
-          </StatLabel>
-          {DataUser.map((v)=>
-          <StatNumber fontSize={'24px'} fontWeight={'700'}>
-          {v.Token}
-          </StatNumber>
-          )}
-        </Box>
-      </Flex>
-    </Stat>
+        <SimpleGrid ml={{ base: '1rem', md: '2rem', lg: '1rem' }} spacingX={'1rem'} spacingY={'1rem'} columns={{ base: 1, md: 3 }}>
+    {DataUser.map((v)=> 
+    <>
+    <Boxtab child1={'Exchange Assets'} child2={'$'+v.Asset} child3={'/dollar-circle.png'}/>
+    <Boxtab child1={'Account Totals'} child2={v.Account} child3={'/wallet-dash.png'}/>
+    <Boxtab child1={'Token'} child2={v.Token} child3={'/bitcoin.png'}/>
+    </>
+    )}
         </SimpleGrid>
+      <TokenChart/>
+      <Box mt={'2rem'} mb={'4rem'} ml={{ base: '-3rem', md: 0, lg: 0 }}>
+      <AccountList />
       </Box>
+      </PagePublic>
   );
 }

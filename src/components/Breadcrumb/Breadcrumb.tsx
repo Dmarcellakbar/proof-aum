@@ -1,13 +1,13 @@
 import { Box } from '@chakra-ui/react'
 import React from 'react'
 
-const Breadcrumb = ({children1, children2}: any) => {
+const Breadcrumb = ({child1, child2}: any) => {
   return (
     <>
     <Box>
     <ul className="breadcrumb">
-      <li><a href={'/'+ children1}>{children1}</a></li>
-      <li>{children2}</li>
+      <li><a href={'/'+ child1}>{child1}</a></li>
+      <li>{child2}</li>
     </ul>
     </Box>
     </>
